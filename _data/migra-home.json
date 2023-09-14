@@ -1,0 +1,69 @@
+{
+  "title": "Migra24 Fair",
+  "page": "Home",
+  "pageurl": "",
+  "canonicalURL": "https://migra24.org/",
+  "version": 1.1,
+  "created": "2023-09-13T00:00:00.000Z",
+  "sections": {
+    "header": {
+      "title": "The only migrant-focused talent gathering in Berlin.",
+      "subtitle": "Migrapreneur is a non-profit and the world’s largest gathering of VC – delivering actionable company-building advice and bringing together the who’s who in startups.",
+      "eventdata": {
+        "date": "7th + 8th Feb 2024, starting at 2PM",
+        "location": "An der Industriebahn 12, 13088 Berlin"
+      }
+    },
+    "why": {
+      "title": "Why Migra24 in 2024.",
+      "subtitle": "We believe it is those who have built iconic startups who provide the most valuable advice for founders. Every company is different, and there are no two paths to building an outstanding company that are the same.",
+      "benefits": [
+        {
+          "text": "+5000 Migrapreneurs and VC’s"
+        },
+        {
+          "text": "+20000 Meetings to take part in"
+        },
+        {
+          "text": "+25 Speakers from around the globe"
+        }
+      ]
+    },
+    "speakers": [
+      {
+        "fullname": "Ana Alvarez",
+        "jobtitle": "Founder and CEO of Migrapreneur"
+      },
+      {
+        "fullname": "",
+        "jobtitle": ""
+      }
+    ],
+    "faq": [
+      {
+        "question": "",
+        "answer": ""
+      },
+      {
+        "question": "",
+        "answer": ""
+      },
+      {
+        "question": "",
+        "answer": ""
+      },
+      {
+        "question": "",
+        "answer": ""
+      },
+      {
+        "question": "",
+        "answer": ""
+      },
+      {
+        "question": "",
+        "answer": ""
+      }
+    ]
+  }
+}

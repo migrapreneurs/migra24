@@ -1,0 +1,158 @@
+
+.pricing-teasers {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 2fr));
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
+}
+
+.pricing-teasers .outer-wrapper {
+  border: 1px solid #c7ccff;
+  padding:20px 20px 20px 20px;
+  border-radius: 20px;
+  box-shadow: 0px 20px 30px -10px rgba(199, 204, 255,0.4);
+  margin:0;
+  display:grid;
+	background-color: var(--AAColPriWhite);
+}
+
+
+
+.pricing-teasers .outer-wrapper .content {
+  margin-top:4em;
+}
+
+.pricing-teasers .outer-wrapper .description {
+	min-height:80px;
+}
+
+.pricing-teasers .highlight {
+  border: 1px solid #FFBBBB;
+  box-shadow: 0px 20px 30px -10px rgba(255, 48, 48,0.2);
+  position: relative;
+}
+
+.pricing-teasers .highlight .btnShell {
+  align-self: end;
+}
+
+.pricing-teasers .highlight-badge {
+  position:absolute;
+  top:5px;
+  right:5px;
+  background-color: var(--AAColPriRed);
+  color: var(--AAColPriWhite);
+  padding:7px 12px;
+  font-size: var(--AATypeXXS);
+  border-radius: 15px;
+}
+
+.pricing-teasers .service-heading {
+  font-size: var(--AATypeTiny);
+  text-transform: uppercase;
+  color: var(--AAColLightGray);
+}
+
+.pricing-teasers .content ul {
+  list-style-type: none;
+  margin:0;
+  padding:0;
+  font-size: var(--AATypeXXXS);
+  margin-bottom: 2em;
+  margin-top:1em;
+}
+
+.pricing-teasers .content ul:last-child {
+  margin-bottom:0
+}
+
+
+.pricing-teasers .content li {
+  display: inline-flex;
+  margin-bottom: 0;
+  line-height: 1.1em;
+  margin-left: 15px;
+  padding-bottom:0.8em;
+  padding-top:0;
+  width:100%
+}
+
+.pricing-teasers .content li:last-child {
+  padding-bottom:0
+}
+
+.pricing-teasers .content li::before {
+    content: "";
+    background: url(../_images/checkmark.svg) 0% 0% no-repeat;
+    width: 28px;
+    height: 14px;
+    display: inline-block;
+    margin-left: -1em;
+}
+
+
+/* ACCORDION */
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: var(--AAColPriWhite);
+  color: var(--AAColPriBlue);
+  cursor: pointer;
+  padding: 1em;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+	transition-property: opacity;
+	border-bottom:1px solid var(--AAColPriBlue);
+	display:block;
+	font-size: var(--AATypeXS);
+	font-family: SansBold
+}
+
+
+.accordion span:first-child {
+	margin-right:20px
+}
+.accordion .right {
+			float: right;
+	    margin-top: 0px !important;
+	    margin-right: 0px;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 2em 1em;
+  display: none;
+  overflow: hidden;
+	font-size: var(--AATypeXS)
+}
+
+
+
+/* MOBILE FIXES */
+@media only screen and (max-width: 1400px) {
+  .pricing-teasers {
+  	grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  }
+}
+
+@media only screen and (max-width: 1163px) {
+  .pricing-teasers {
+  	grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+  }
+  .pricing-teasers .outer-wrapper:not(.highlight) {
+    margin-top:0;
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  #pricing-plans {
+    margin-top:8em;
+  }
+
+	.pricing-teasers {
+  	grid-template-columns: repeat(auto-fit, minmax(min(600px, 100%), 1fr));
+  }
+}

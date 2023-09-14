@@ -1,0 +1,68 @@
+{
+  "metadata": [
+    {
+      "meta": [
+        {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1"
+        },
+        {
+          "name": "robots",
+          "content": "noindex,nofollow"
+        },
+        {
+          "name": "description",
+          "content": "Craft winning outreach emails that hit home."
+        },
+        {
+          "name": "twitter:card",
+          "content": "summary"
+        },
+        {
+          "name": "twitter:site",
+          "content": "@maddux"
+        },
+        {
+          "name": "twitter:title",
+          "content": "Maddux AI"
+        },
+        {
+          "name": "twitter:description",
+          "content": "Craft outreach emails that hit home."
+        },
+        {
+          "name": "twitter:creator",
+          "content": "@maddux"
+        },
+        {
+          "name": "twitter:image",
+          "content": "https://res.cloudinary.com/vitobica/image/upload/v1688413082/getmaddux/sharing-image-maddux.jpg"
+        },
+        {
+          "property": "og:title",
+          "content": "Maddux AI – 📥 Craft outreach emails that hit home."
+        },
+        {
+          "property": "og:type",
+          "content": "Website"
+        },
+        {
+          "property": "og:url",
+          "content": "https://getmaddux.com"
+        },
+        {
+          "property": "og:image",
+          "content": "https://res.cloudinary.com/vitobica/image/upload/v1688413082/getmaddux/sharing-image-maddux.jpg"
+        },
+        {
+          "property": "og:description",
+          "content": "Craft winning outreach emails that hit home."
+        },
+        {
+          "property": "og:site_name",
+          "content": "Maddux AI – 📥 Craft outreach emails that hit home."
+        }
+      ]
+    }
+  ]
+}

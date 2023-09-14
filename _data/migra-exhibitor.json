@@ -1,0 +1,121 @@
+{
+  "title": "Migra24 Fair",
+  "page": "Exibitors",
+  "pageurl": "exibitors",
+  "canonicalURL": "https://migra24.org/",
+  "version": 1.1,
+  "created": "2023-09-13T00:00:00.000Z",
+  "primary-cta": {
+    "text": "Book a call with us",
+    "url": "https://calendly.com/migrapreneur/migra24-exhibitors"
+  },
+  "sections": {
+    "header": {
+      "title": "Become an exhibitor",
+      "subtitle": "10k+ attendees, 200+ companies and 300+ partners in four cities across Europe. A great opportunity to find or change to a new job, learn from the best experts in the IT & Digital industry and to network with your peers.",
+      "": {}
+    },
+    "why": {
+      "title": "Why partner up with Migrapreneur.",
+      "benefits": [
+        {
+          "text": "Great opportunity to connect with more than 1000+ attendees."
+        },
+        {
+          "text": "It is more than a job fair, it's a branding opportunity for your brand/ company."
+        },
+        {
+          "text": "Find access to our community having the chance to start engaging with top notch students, young and tech professionals."
+        },
+        {
+          "text": "Connect and stay in touch with other companies and platforms in other fields such as the medical and health field, media, education institutions and more..."
+        },
+        {
+          "text": "Get additional reach and visibility. The sooner you save your spot, the faster we start promoting your brand and culture within our 200K+ followers & huge community."
+        },
+        {
+          "text": "The event is held with the clear objective of providing equal treatment to all, regardless of color, gender, culture, etc. We strongly believe that talents are not limited to any hitches."
+        }
+      ],
+      "ctabox": {
+        "title": "Book your seats now before your competitor does, as there are limited stands available!",
+        "incentive": [
+          {
+            "text": "The quicker you are at booking your place, the better location you get of your choice. The availability of rostrums, assignment of communication/presentation apertures and workspaces of the events are limited."
+          },
+          {
+            "text": "This is a chance not to be missed, if you’re not there your competitors will be!"
+          }
+        ]
+      }
+    },
+    "venue": [
+      {
+        "name": "Motorwerk",
+        "address": "An der Industriebahn 12",
+        "zipcode": "13088",
+        "city": "Berlin",
+        "mapslink": "https://www.google.com/maps/place/Motorwerk+Berlin/@52.5632405,13.4587593,17z/data=!3m1!4b1!4m6!3m5!1s0x47a84dbe7226dc47:0x376e04be31aef322!8m2!3d52.5632405!4d13.4613342!16s%2Fg%2F1ylhllth3?entry=ttu"
+      }
+    ],
+    "boothplans": {
+      "header": {
+        "title": "Booth Plans",
+        "subtitle": "Let’s discuss your needs and requirements and let us make this happen together."
+      },
+      "boothtypes": [
+        {
+          "tableheaders": [
+            "Booth Type",
+            "Description",
+            "Unit Size",
+            "Unit Price",
+            "Total Price"
+          ],
+          "items": [
+            {
+              "booth-type": "Type A",
+              "description": "Includes electricity, own design, 3 partner tickets",
+              "unit-size": "1× 5m²",
+              "unit-price": "2500",
+              "total-price": "2500"
+            },
+            {
+              "booth-type": "Type B",
+              "description": "Includes electricity, booth designed by Migrapreneur, 3 partner tickets",
+              "unit-size": "2× 5m²",
+              "unit-price": "3500",
+              "total-price": "7500"
+            }
+          ]
+        }
+      ]
+    },
+    "faq": [
+      {
+        "question": "",
+        "answer": ""
+      },
+      {
+        "question": "",
+        "answer": ""
+      },
+      {
+        "question": "",
+        "answer": ""
+      },
+      {
+        "question": "",
+        "answer": ""
+      },
+      {
+        "question": "",
+        "answer": ""
+      },
+      {
+        "question": "",
+        "answer": ""
+      }
+    ]
+  }
+}
