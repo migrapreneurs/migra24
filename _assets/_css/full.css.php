@@ -9,7 +9,8 @@ function compress($buffer) {
 }
 
 include('normalize.css');
-include('base.css');
+include('root-system.css');
+include('extended-system.css');
 include('flexboxgrid.min.css');
 
 ob_end_flush();

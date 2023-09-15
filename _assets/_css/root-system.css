@@ -1,0 +1,644 @@
+/* Saol Display SemiBold Font */
+@font-face {
+  font-family: 'Saol Display SemiBold';
+  src: url('../_typefaces/Saol-Display-SemiBold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Suisse Intl Light Font */
+@font-face {
+  font-family: 'Suisse Intl Light';
+  src: url('../_typefaces/SuisseIntl-Light-WebS.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Suisse Intl Light Font */
+@font-face {
+  font-family: 'Suisse Intl SemiBold';
+  src: url('../_typefaces/SuisseIntl-SemiBold-WebS.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+:root {
+
+  /* Standard Typography */
+  --txt-standard: 'Suisse Intl Light', sans-serif;
+  --txt-bold: 'Suisse Intl SemiBold', sans-serif;
+  --txt-display: 'Saol Display SemiBold', serif;
+
+  /* Color variables */
+  --col-pri-black: hsla(221, 39%, 11%, 1);
+  --col-pri-white: hsla(0, 0%, 100%, 1);
+  --col-pri-red: hsla(5, 71%, 62%, 1);
+  --col-pri-yellow: hsla(50, 76%, 53%, 1);
+  --col-pri-turquoise: hsla(147, 75%, 56%, 1);
+  --col-pri-lille: hsla(244, 75%, 58%, 1);
+
+  --col-sec-beige-light: hsla(45, 67%, 70%, 1);
+  --col-sec-beige-dark: hsla(38, 67%, 41%, 1);
+  --col-sec-pea-light: hsla(38, 67%, 41%, 1);
+  --col-sec-pea-dark: hsla(69, 67%, 35%, 1);
+  --col-sec-peach: hsla(23, 71%, 62%, 1);
+
+  --col-signal-success: hsla(147, 100%, 44%, 1);
+  --col-signal-warning: hsla(50, 100%, 49%, 1);
+  --col-signal-error: hsla(5, 100%, 66%, 1);
+
+  --col-shade-black-1: hsla(221, 16%, 49%, 1);
+
+  /* Typography variables */
+  --type-xxl: calc(46px + (80 - 46) * ((100vw - 375px) / (1600 - 375)));
+  --type-xl: calc(36px + (50 - 36) * ((100vw - 375px) / (1600 - 375)));
+  --type-l: calc(33px + (45 - 33) * ((100vw - 375px) / (1600 - 375)));
+  --type-m: calc(30px + (40 - 30) * ((100vw - 375px) / (1600 - 375)));
+  --type-s: calc(27px + (35 - 27) * ((100vw - 375px) / (1600 - 375)));
+  --type-xs: calc(24px + (30 - 24) * ((100vw - 375px) / (1600 - 375)));
+  --type-xxs: calc(21px + (25 - 21) * ((100vw - 375px) / (1600 - 375)));
+  --type-xxxs: calc(20px + (20 - 20) * ((100vw - 375px) / (1600 - 375)));
+  --type-tiny: 18px;
+  --type-micro: 15px;
+  --type-nano: 12px;
+
+}
+
+
+body {
+  font-family: var(--txt-standard);
+  background-color: var(--col-pri-black);
+  color: var(--col-pri-white);
+  margin: 0!important;
+  font-size: var(--type-micro);
+  padding:0 !important;
+  font-kerning: normal;
+  counter-reset: item;
+  -webkit-overflow-scrolling: touch;
+}
+
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 0.875em;
+  margin-bottom: 0.4em;
+  margin-top:0;
+  padding-top:0;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--txt-display);
+}
+
+h5, h6, p b, b, strong, .bold {
+    font-family: var(--txt-bold);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Definitions */
+p {
+  line-height: 1.43em;
+  margin-top:0;
+  padding-top:0;
+  letter-spacing: 1px;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+p a.link {
+  text-decoration: underline;
+}
+
+
+
+
+.h1XL {
+  font-size: var(--type-xxl);
+}
+
+.h1, h1 {
+  font-size: var(--type-xl);
+}
+
+.h2, h2 {
+  font-size: var(--type-l);
+}
+
+.h3, h3 {
+  font-size: var(--type-m);
+}
+
+.h4, h4 {
+  font-size: var(--type-s);
+}
+
+.h5, h5 {
+  font-size: var(--type-xs);
+}
+
+.h6, h6 {
+  font-size: var(--type-xxs);
+}
+
+.L {
+  font-size: var(--type-xxs);
+}
+
+.M {
+  font-size: var(--type-xxxs);
+}
+
+.S {
+  font-size: var(--type-tiny);
+}
+
+.XS {
+  font-size: var(--type-micro);
+}
+
+
+
+
+
+/* SPACINGS */
+
+
+.mar-b-120 {
+  margin-bottom: calc(60px + (120 - 60) * ((100vw - 375px) / (1600 - 375))) !important;
+}
+
+.mar-t-120 {
+  margin-top: calc(60px + (120 - 60) * ((100vw - 375px) / (1600 - 375))) !important;
+}
+
+.mar-b-100 {
+  margin-bottom: calc(50px + (100 - 50) * ((100vw - 375px) / (1600 - 375))) !important;
+}
+
+.mar-t-100 {
+  margin-top: calc(50px + (100 - 50) * ((100vw - 375px) / (1600 - 375))) !important;
+}
+
+.mar-b-80 {
+  margin-bottom: calc(40px + (80 - 40) * ((100vw - 375px) / (1600 - 375))) !important;
+}
+
+.mar-t-80 {
+  margin-top: calc(40px + (80 - 40) * ((100vw - 375px) / (1600 - 375))) !important;
+}
+
+.mar-b-60 {
+  margin-bottom: calc(30px + (60 - 30) * ((100vw - 375px) / (1600 - 375))) !important;
+}
+
+.mar-t-60 {
+  margin-top: calc(30px + (60 - 30) * ((100vw - 375px) / (1600 - 375))) !important;
+}
+
+.mar-b-40 {
+  margin-bottom: calc(20px + (40 - 20) * ((100vw - 375px) / (1600 - 375))) !important;
+}
+
+.mar-t-40 {
+  margin-top: calc(20px + (40 - 20) * ((100vw - 375px) / (1600 - 375))) !important;
+}
+
+.mar-b-20 {
+  margin-bottom: calc(10px + (20 - 10) * ((100vw - 375px) / (1600 - 375))) !important;
+}
+
+.mar-t-20 {
+  margin-top: calc(10px + (20 - 10) * ((100vw - 375px) / (1600 - 375))) !important;
+}
+
+/* Utility classes for text color */
+.text-black {
+  color: var(--col-pri-black);
+}
+
+.text-white {
+  color: var(--col-pri-white);
+}
+
+.text-red {
+  color: var(--col-pri-red);
+}
+
+.text-yellow {
+  color: var(--col-pri-yellow);
+}
+
+.text-turquoise {
+  color: var(--col-pri-turquoise);
+}
+
+.text-lille {
+  color: var(--col-pri-lille);
+}
+
+.text-beige-light {
+  color: var(--col-sec-beige-light);
+}
+
+.text-beige-dark {
+  color: var(--col-sec-beige-dark);
+}
+
+.text-pea-light {
+  color: var(--col-sec-pea-light);
+}
+
+.text-pea-dark {
+  color: var(--col-sec-pea-dark);
+}
+
+.text-peach {
+  color: var(--col-sec-peach);
+}
+
+.text-success {
+  color: var(--col-signal-success);
+}
+
+.text-warning {
+  color: var(--col-signal-warning);
+}
+
+.text-error {
+  color: var(--col-signal-error);
+}
+
+.text-shade-black-1 {
+  color: var(--col-shade-black-1);
+}
+
+/* Utility classes for background color */
+.bg-black {
+  background-color: var(--col-pri-black);
+}
+
+.bg-white {
+  background-color: var(--col-pri-white);
+}
+
+.bg-red {
+  background-color: var(--col-pri-red);
+}
+
+.bg-yellow {
+  background-color: var(--col-pri-yellow);
+}
+
+.bg-turquoise {
+  background-color: var(--col-pri-turquoise);
+}
+
+.bg-lille {
+  background-color: var(--col-pri-lille);
+}
+
+.bg-beige-light {
+  background-color: var(--col-sec-beige-light);
+}
+
+.bg-beige-dark {
+  background-color: var(--col-sec-beige-dark);
+}
+
+.bg-pea-light {
+  background-color: var(--col-sec-pea-light);
+}
+
+.bg-pea-dark {
+  background-color: var(--col-sec-pea-dark);
+}
+
+.bg-peach {
+  background-color: var(--col-sec-peach);
+}
+
+.bg-success {
+  background-color: var(--col-signal-success);
+}
+
+.bg-warning {
+  background-color: var(--col-signal-warning);
+}
+
+.bg-error {
+  background-color: var(--col-signal-error);
+}
+
+.bg-shade-black-1 {
+  background-color: var(--col-shade-black-1);
+}
+
+
+img, video {
+    border: 0;
+    vertical-align: middle;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+}
+
+
+
+/* Elements */
+
+.btn {
+  border-radius: 60px;
+  border: none;
+  outline: none; /* Remove the outline when the button is clicked */
+  cursor: pointer; /* Add a pointer cursor to indicate interactivity */
+  font-family: var(--txt-bold);
+  margin-right:20px;
+  display:inline-flex;
+}
+
+.btn:last-child {
+  margin-right:0
+}
+
+.btn.large {
+  padding: calc(15px + (30 - 15) * ((100vw - 375px) / (1600 - 375)));
+  font-size: var(--type-xxxs);
+
+}
+
+.btn.standard {
+  padding-top: calc(10px + (15 - 10) * ((100vw - 375px) / (1600 - 375)));
+  padding-bottom: calc(10px + (15 - 10) * ((100vw - 375px) / (1600 - 375)));
+  padding-left: calc(15px + (20 - 15) * ((100vw - 375px) / (1600 - 375)));
+  padding-right: calc(15px + (20 - 15) * ((100vw - 375px) / (1600 - 375)));
+}
+
+
+/* Style the parent container for input fields */
+.input-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns for desktop */
+  gap: 20px 20px; /* Vertical and horizontal gaps */
+}
+
+/* Style each input */
+.input-wrapper {
+  width: calc(100% - 40px); /* Set a fixed width with horizontal gap */
+  margin-right: 20px; /* Add horizontal gap between input fields */
+}
+
+/* Style the label */
+label {
+  font-size: var(--type-nano);
+  letter-spacing: 1px;
+  margin-bottom: 6px; /* Add spacing between label and input */
+  color: var(--col-shade-black-1);
+  transition: color 0.2s ease-in-out;
+  display: flex;
+}
+
+/* Style the input */
+input {
+  width: 100%; /* Make the input fill the parent container */
+  padding: 15px 20px;
+  border: 1px solid var(--col-shade-black-1);
+  border-radius: 5px;
+  font-size: var(--type-micro);
+  outline: none;
+  color: var(--col-pri-white);
+  background-color: var(--col-pri-black);
+
+  /* Add styles for when the input is in focus */
+  transition: border-color 0.2s ease-in-out;
+}
+
+/* Style the custom select container */
+.select-container {
+  position: relative; /* Position relative for absolute positioning of the arrow */
+  width: 100%; /* Make the select container fill the parent container */
+}
+
+/* Style the select input */
+.select-input {
+  width: 100%; /* Make the input fill the parent container */
+  padding: 15px 20px;
+  border: 1px solid var(--col-shade-black-1);
+  border-radius: 5px;
+  font-size: var(--type-micro);
+  outline: none;
+  color: var(--col-pri-white);
+  background-color: var(--col-pri-black);
+  appearance: none; /* Remove default styles on some browsers */
+  cursor: pointer; /* Show pointer cursor for select input */
+
+  /* Add styles for when the input is in focus */
+  transition: border-color 0.2s ease-in-out;
+}
+
+/* Style the custom arrow-down icon using a background image */
+.select-container::after {
+  content: ''; /* Add content for pseudo-element */
+  position: absolute;
+  top: 43px;
+  right: 20px; /* Adjust the right distance as needed */
+  transform: translateY(-50%);
+  width: 18px; /* Set the width of the arrow icon */
+  height: 10px; /* Set the height of the arrow icon */
+  background-image: url('../_images/arrow-down.svg'); /* Replace with your SVG file path */
+  background-size: cover;
+}
+
+
+/* Apply styles when input is in focus */
+input:focus, .select-input:focus {
+  border-color: var(--col-pri-turquoise); /* Change border color on focus */
+}
+
+/* Style the label when input is in focus */
+.input-wrapper:focus-within label,.select-container:focus-within label {
+  color: var(--col-pri-turquoise); /* Change label color on focus */
+}
+
+/* Apply media query for mobile devices */
+@media (max-width: 768px) {
+  /* Reset grid layout for mobile layout */
+  .input-container {
+    grid-template-columns: 1fr; /* Single column for mobile */
+    gap: 20px; /* Maintain vertical gap for mobile */
+  }
+
+  /* Adjust margins for better spacing on mobile */
+  .input-wrapper {
+    margin-bottom: 20px; /* Vertical gap of 20px on mobile */
+  }
+}
+
+
+
+
+/* Style the li elements within the "standard" ul */
+ul.standard li {
+  display: block; /* Ensure each li is a block-level element */
+  padding-left: 40px; /* Add padding for text to create the gap */
+  line-height: 1.4em; /* Adjust line height as needed */
+  position: relative; /* Set position to relative */
+  margin-bottom: 20px; /* Adjust margin between list items */
+  font-size: var(--type-xxxs);
+  letter-spacing: 1px
+}
+
+/* Create the small rectangle background for each li */
+ul.standard li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 20px;
+  height: 5px;
+  background-color: var(--col-pri-red);
+  z-index: -1; /* Place the background behind the text */
+}
+
+/* Style the li elements within the "standard" ul */
+ul.circle li {
+  display: block; /* Ensure each li is a block-level element */
+  padding-left: 20px; /* Add padding for text to create the gap */
+  line-height: 1.4em; /* Adjust line height as needed */
+  position: relative; /* Set position to relative */
+  margin-bottom: 20px; /* Adjust margin between list items */
+  font-size: var(--type-micro);
+  letter-spacing: 1px
+}
+
+/* Create the small rectangle background for each li */
+ul.circle li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 5px;
+  height: 5px;
+  border-radius:10px;
+  background-color: var(--col-pri-white);
+  z-index: -1; /* Place the background behind the text */
+}
+
+ul.circle.white li {
+  color: var(--col-pri-white);
+}
+/* Create the small rectangle background for each li */
+ul.circle.white li::before {
+  background-color: var(--col-pri-white);
+}
+
+ul.circle.black li {
+  color: var(--col-pri-black);
+}
+/* Create the small rectangle background for each li */
+ul.circle.black li::before {
+  background-color: var(--col-pri-black);
+}
+
+
+.rounded-box {
+  border-radius: calc(15px + (40 - 15) * ((100vw - 375px) / (1600 - 375)));
+  padding: calc(20px + (40 - 20) * ((100vw - 375px) / (1600 - 375)));
+}
+
+
+
+
+
+/* Style the FAQ container */
+.faq-container {
+
+}
+
+/* Style the FAQ items */
+.faq-item {
+  margin-bottom: 20px;
+}
+
+/* Hide the checkbox inputs */
+.faq-toggle {
+  display: none;
+}
+
+/* Style the question labels */
+.faq-question {
+  background-color: var(--col-pri-black);
+  border: 1px solid var(--col-pri-white);
+  border-top:0;
+  border-left:0;
+  border-right:0;
+  color: var(--col-pri-white);
+  padding: 20px;
+
+  text-align: left;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s ease-in-out;
+  font-size: var(--type-xxxs);
+  font-family: var(--txt-bold);
+}
+
+/* Style the plus/minus icons */
+.faq-question::before {
+  content: ''; /* Remove the text content */
+    position: absolute;
+    top: 50%; /* Vertically center the icon */
+    right: 20px;
+    transform: translateY(-50%); /* Vertically centering transform */
+    width: 16px; /* Adjust the width and height based on your SVG size */
+    height: 16px;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+  /* Set the background image for the plus sign */
+  background-image: url('../_images/faq-plus.svg'); /* Replace with your SVG path */
+
+  transition: content 0.3s ease-in-out;
+}
+
+/* Add styles for the expanded state */
+.faq-toggle:checked + .faq-question {
+  background-color: var(--col-pri-black);
+  border: 1px solid var(--col-pri-white);
+  border-top:0;
+  border-left:0;
+  border-right:0;
+  color: var(--col-pri-white);
+}
+
+/* Add styles for the expanded state */
+.faq-toggle:checked + .faq-question::before {
+  /* Set the background image for the minus sign */
+  background-image: url('../_images/faq-minus.svg'); /* Replace with your SVG path */
+}
+
+/* Style the answer (initially hidden) */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  opacity: 0;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
+  font-size: var(--type-tiny);
+  line-height: 1.4em;
+  font-family: var(--txt-standard);
+}
+
+/* Toggle the answer visibility when the label is clicked */
+.faq-toggle:checked + .faq-question + .faq-answer {
+  max-height: 1000px;
+  opacity: 1;
+  padding: 20px;
+}

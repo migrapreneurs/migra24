@@ -39,9 +39,7 @@
         <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
       <![endif]-->
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
       <link rel="stylesheet" href="_assets/_css/full.css.php">
 
 
@@ -65,7 +63,7 @@
                   <h1 class="h1 col-sm-9">Craft outreach emails that hit home.</h1>
                   <p class="XXS col-sm-8">Increase your open rates and get more responses – powered by a well-tuned AI.</p>
                   <p class="XSS col-sm-8 bold">Enjoy. Free for now. 50 emails per month.</p>
-                  <div id="FirstCTA" class="CTA col-xs-12">
+                  <div class="col-xs-12">
             	       <div class="mar-t-30 mar-b-60">
                        <a class="btn btn-pri btn-large bold dot-red-2" href="https://app.getmaddux.com/build">📥&nbsp;&nbsp;&nbsp;Draft your first email</a>
                      </div>
@@ -76,13 +74,6 @@
 
               </div>
             </div>
-            <article class="row col-xs-12 mar-t-90">
-              <video class="embed-video-box col-xs-12" autoplay loop muted playsinline>
-                <source src="https://res.cloudinary.com/vitobica/video/upload/q_auto:best/e_sharpen:500/v1688453432/getmaddux/maddux-demo.mp4" type="video/mp4">
-                <source src="https://res.cloudinary.com/vitobica/video/upload/q_auto:best/e_sharpen:500/v1688453432/getmaddux/maddux-demo.webm" type="video/webm">
-                <source src="https://res.cloudinary.com/vitobica/video/upload/q_auto:best/e_sharpen:500/v1688453432/getmaddux/maddux-demo.ogv" type="video/ogg">
-              </video>
-            </article>
           </section>
 
         </main>

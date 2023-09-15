@@ -1,0 +1,322 @@
+/* Main Layout */
+
+/* NAVBAR */
+/* Styles for the <header> element */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(50px + (90 - 50) * ((100vw - 375px) / (1600 - 375)));
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Add this line to horizontally align the logo and nav */
+}
+
+.icon-container {
+  position: fixed;
+  top: 10px;
+  right: 0;
+  z-index:9999;
+}
+
+
+/* Style for the hamburger and close icons */
+.hamburger-icon, .close-icon {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  fill: white;
+  margin-right:15px;
+}
+
+.hamburger-icon {
+  display:none;
+}
+
+.hidden {
+  display:none !important;
+}
+
+
+
+.mobile-menu {
+  display: none; /* Initially hide the mobile menu */
+}
+
+
+/* Style for the logo */
+.logo {
+  margin-left: 20px; /* Adjust the margin as needed */
+  height: calc(100% - 40px); /* Calculate the height, considering 20px padding top and bottom */
+  display: flex;
+  align-items: center; /* Center the logo vertically within the header */
+  position:relative;
+  z-index:10000;
+}
+
+/* Style for the logo on smaller screens */
+@media (max-width: 1199px) {
+  .logo {
+    margin-left: 15px; /* Adjust the margin as needed */
+    height: calc(100% - 30px); /* Calculate the height, considering 20px padding top and bottom */
+  }
+
+}
+
+/* Style for the logo on smaller screens */
+@media (max-width: 1023px) {
+  .logo {
+    margin-left: 10px; /* Adjust the margin as needed */
+    height: calc(100% - 20px); /* Calculate the height, considering 20px padding top and bottom */
+  }
+
+  nav {
+    display:none;
+  }
+
+  /* Show the hamburger menu icon */
+  .hamburger-icon {
+    display: block;
+  }
+
+  /* Style for the mobile menu */
+  .mobile-menu {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--col-pri-black);
+    display: flex;
+    flex-direction: column;
+    z-index: 9998;
+    padding-left: 40px;
+    padding-top: 0;
+  }
+
+  .mobile-menu ul {
+    list-style: none;
+    padding: 60px 0;
+  }
+
+  .mobile-menu li {
+    margin-top:30px;
+    font-family: var(--txt-display);
+    font-size: var(--type-xl);
+  }
+
+  .mobile-menu a {
+    text-decoration: none;
+
+  }
+
+  /* Style for the close button (X icon) */
+  .close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 24px;
+  }
+
+}
+
+.logo img {
+  height: 100%; /* Make the image fill the height of the .logo container */
+  width: auto; /* Maintain the aspect ratio */
+}
+
+/* Style for the navigation bar */
+nav {
+  margin-right: 20px; /* Adjust the margin as needed */
+  margin-left: auto; /* Place nav on the right side of the header */
+}
+
+/* Style for the navigation links */
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+    justify-content: space-between;
+}
+
+nav li {
+  margin-right: 30px; /* Adjust the margin between navigation items */
+}
+
+nav li:last-child {
+  margin-right: 0; /* Adjust the margin between navigation items */
+}
+
+nav a {
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-size: var(--type-nano);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+main {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: calc(50px + (73 - 50) * ((100vw - 375px) / (1600 - 375)));
+  margin-bottom: calc(50px + (70 - 50) * ((100vw - 375px) / (1600 - 375)));
+  width: calc(100% - 40px);
+}
+
+section {
+  margin-bottom: calc(60px + (120 - 60) * ((100vw - 375px) / (1600 - 375)));
+  margin-left: calc(0px + (120 - 0) * ((100vw - 375px) / (1600 - 375)));
+  margin-right: calc(0px + (120 - 0) * ((100vw - 375px) / (1600 - 375)));
+}
+
+section:last-child {
+  margin-bottom: 0;
+}
+
+footer {
+  padding: 20px 0;
+}
+
+
+
+/* IMAGE GALLERY */
+/* Style the gallery container */
+.gallery-container {
+  position: relative;
+  overflow: hidden;
+  max-height: 100vh; /* Set the maximum height to the viewport height */
+}
+
+/* Style the gallery to display slides horizontally */
+.gallery {
+  display: flex;
+  overflow-x: hidden; /* Change this line */
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  border-radius: calc(15px + (40 - 15) * ((100vw - 375px) / (1600 - 375)));
+}
+
+/* Style individual gallery slides */
+.gallery-slide {
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  width:100%;
+}
+
+.gallery-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Style the bullet navigation */
+.gallery-bullets {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  align-items: center; /* Vertically center the bullets */
+  height:20px;
+}
+
+/* Style individual bullet indicators */
+.gallery-bullet {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--col-pri-lille);
+  margin: 0 5px;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Add smooth transition for bullet size change */
+}
+
+/* Style the active bullet */
+.gallery-bullet.active {
+  background-color: var(--col-pri-yellow);
+  width: 15px;
+  height: 15px;
+  transform: scale(1.2); /* Increase size of active bullet */
+}
+
+
+
+/* HERO STAGE */
+/* Create a container for the hero section */
+.hero {
+  position: relative;
+  height: 100vh; /* This ensures the container fills the entire viewport height */
+  background-image: url('https://res.cloudinary.com/migrapreneur/image/upload/v1694777170/migra24/common/migra24-header.jpg'); /* Replace 'your-image.jpg' with your image URL */
+  background-size: cover;
+  background-position: center;
+  color: var(--col-pri-white);
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 1023px) {
+  .hero {
+    background-image: url('https://res.cloudinary.com/migrapreneur/image/upload/c_fill,g_faces:auto,h_800,w_1024/v1694777170/migra24/common/migra24-header.jpg'); /* Replace 'your-image.jpg' with your image URL */
+  }
+}
+
+@media (max-width: 460px) {
+  .hero {
+    background-image: url('https://res.cloudinary.com/migrapreneur/image/upload/c_fill,g_faces:auto,h_800,w_460/v1694777170/migra24/common/migra24-header.jpg'); /* Replace 'your-image.jpg' with your image URL */
+  }
+}
+
+
+/* Add some overlay to the background image */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(17, 24, 39, 0.1); /* Adjust the opacity as needed */
+}
+
+/* Style the text inside the hero section */
+.hero-text {
+  z-index: 1;
+}
+
+#countdown {
+  display:inline-block;
+  font-family: var(--txt-standard);
+  padding: calc(15px + (30 - 15) * ((100vw - 375px) / (1600 - 375)));
+  border-radius:60px;
+}
+
+/* Default styles for the flex container */
+.hero-cta-container {
+    display: inline-flex;
+    justify-content: space-between; /* Horizontal alignment for desktop */
+    gap: 10px; /* Gap between items (both horizontal and vertical) */
+}
+
+/* Style for the "Buy Tickets" button */
+.hero-cta-container .btn {
+    width: 110px; /* Set a fixed width for the button */
+}
+
+/* Media query for mobile devices (adjust the breakpoint as needed) */
+@media (max-width: 768px) {
+    .hero-cta-container {
+        flex-direction: column; /* Vertical alignment for mobile */
+    }
+}
