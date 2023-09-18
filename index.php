@@ -54,7 +54,7 @@ if ($json_data === false) {
     }
 }
 
-
+var_dump($jsonData);
 ?>
 
 <!doctype html>
