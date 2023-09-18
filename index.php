@@ -41,6 +41,8 @@ $htmlMetaTags = generateMetaTags($metadata['metadata'][0]['meta']);
 
     // Decode the JSON data into an associative array
     $jsonData = json_decode($json_data, true);
+
+    var_dump($jsonData);
 ?>
 
 <!doctype html>
@@ -148,20 +150,10 @@ $htmlMetaTags = generateMetaTags($metadata['metadata'][0]['meta']);
             </ul>
           </section>
 
-          <section id="Why" class="row mar-t-120 col-xs-12">
-            <h2 class="h1"><?php echo $jsonData['sections']['why']['title']; ?></h2>
-            <p class="L col-lg-8"><?php echo $jsonData['sections']['why']['subtitle']; ?></p>
-            <ul class="highlight-box col-xs-12 mar-t-40">
-              <?php
-              foreach ($jsonData['sections']['why']['benefits'] as $benefit) {
-                echo '<li class="">' . $benefit['text'] . '</li>';
-              }
-              ?>
-            </ul>
-          </section>
+
 
           <!-- SPEAKERS -->
-          <div id="Speakers" class="mar-t-80">
+          <section id="Speakers" class="mar-t-80">
             <h6 class="mar-b-60">Draggable Card List</h6>
             <div class="card-list-container">
               <div class="card-list">
@@ -178,7 +170,7 @@ $htmlMetaTags = generateMetaTags($metadata['metadata'][0]['meta']);
               <?php }} ?>
               </div>
             </div>
-          </div>
+          </section>
 
         </main>
 
