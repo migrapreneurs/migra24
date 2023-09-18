@@ -51,7 +51,7 @@ if ($json_data === false) {
     }
 }
 
-var_dump($jsonData);
+//var_dump($jsonData);
 
 ?>
 
