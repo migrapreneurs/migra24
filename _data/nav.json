@@ -4,7 +4,7 @@
   "header": {
     "nav": [
       {
-        "linkstyle": "button",
+        "linkstyle": "btn1",
         "linktext": "Become an exhibitor",
         "linkURL": "/exhibitors"
       },
@@ -29,7 +29,7 @@
         "linkURL": "#faq"
       },
       {
-        "linkstyle": "link",
+        "linkstyle": "btn2",
         "linktext": "Buy Tickets",
         "linkURL": "#tickets"
       }
