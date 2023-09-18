@@ -48,13 +48,9 @@ if ($json_data === false) {
     if ($jsonData === null) {
         // Handle JSON decoding error, e.g., echo a decoding error message
         echo "Error decoding JSON data.";
-    } else {
-        // JSON data successfully decoded, proceed with your logic
-        var_dump($jsonData);
-    }
+    } 
 }
 
-var_dump($jsonData);
 ?>
 
 <!doctype html>
