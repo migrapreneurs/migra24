@@ -50,8 +50,8 @@ header {
 
 /* Style for the logo */
 .logo {
-  margin-left: 20px; /* Adjust the margin as needed */
-  height: calc(100% - 40px); /* Calculate the height, considering 20px padding top and bottom */
+  margin-left: 25px; /* Adjust the margin as needed */
+  height: calc(100% - 50px); /* Calculate the height, considering 20px padding top and bottom */
   display: flex;
   align-items: center; /* Center the logo vertically within the header */
   position:relative;
@@ -61,8 +61,8 @@ header {
 /* Style for the logo on smaller screens */
 @media (max-width: 1199px) {
   .logo {
-    margin-left: 15px; /* Adjust the margin as needed */
-    height: calc(100% - 30px); /* Calculate the height, considering 20px padding top and bottom */
+    margin-left: 20px; /* Adjust the margin as needed */
+    height: calc(100% - 40px); /* Calculate the height, considering 20px padding top and bottom */
   }
 
 }
@@ -155,7 +155,7 @@ nav li:last-child {
 nav a {
   text-decoration: none;
   letter-spacing: 1px;
-  font-size: var(--type-nano);
+  font-size: var(--type-micro);
 
 }
 
@@ -175,7 +175,22 @@ main {
   margin-right: 20px;
   margin-top: calc(50px + (73 - 50) * ((100vw - 375px) / (1600 - 375)));
   margin-bottom: calc(50px + (70 - 50) * ((100vw - 375px) / (1600 - 375)));
-  width: calc(100% - 40px);
+
+}
+
+/* Hide the horizontal scrollbar */
+main::-webkit-scrollbar {
+  width: 0.1em;
+  height: 0.1em;
+}
+
+main::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+main::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border: none;
 }
 
 section {
@@ -318,5 +333,185 @@ footer {
 @media (max-width: 768px) {
     .hero-cta-container {
         flex-direction: column; /* Vertical alignment for mobile */
+    }
+}
+
+
+/* Speaker List Slider */
+
+.card-list-container {
+  overflow: hidden; /* Hide the horizontal scrollbar */
+  position: relative;
+  width: 100%;
+}
+
+/* Add a small blur on the right side of the card list container */
+.card-list-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80px;
+  height: 100%;
+  background: linear-gradient(to right, transparent, rgba(17, 24, 39, 0.7), rgba(17, 24, 39, 1), rgba(17, 24, 39, 1)); /* Adjust the gradient as needed */
+  pointer-events: none; /* Ensure the pseudo-element is not interactive */
+}
+
+
+
+.card-list {
+  display: flex;
+  gap: 20px;
+  /* Enable horizontal scrolling and set snap type */
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+  margin-right:20px
+}
+
+/* Hide the horizontal scrollbar */
+.card-list::-webkit-scrollbar {
+  display: none;
+}
+
+
+.card {
+  width: calc(280px + (280 - 280) * ((100vw - 375px) / (1600 - 375)));
+  flex-shrink: 0;
+  scroll-snap-align: start; /* Snap cards to the start of the container */
+}
+
+.card-text {
+  margin-top: 20px;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: calc(20px + (80 - 20) * ((100vw - 375px) / (1600 - 375)));
+  border: 1px solid transparent;
+}
+
+/* Add hover effect for cards */
+.card img {
+  border: 1px solid transparent; /* Initial border style for the image */
+  transition: border-color 0.3s ease-in-out; /* Apply the transition to the image */
+}
+
+.card:hover img {
+  border-color: var(--col-pri-turquoise); /* Change the border color on hover */
+}
+
+.card:hover .card-text h3,
+.card:hover .card-text p {
+  color: var(--col-pri-turquoise); /* Change the text color on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .card-list-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(17, 24, 39, 0.7), rgba(17, 24, 39, 1)); /* Adjust the gradient as needed */
+    pointer-events: none; /* Ensure the pseudo-element is not interactive */
+  }
+  .card-list {
+    margin-right:20px
+  }
+}
+
+
+/* TABLES */
+.table-container {
+  max-width: 100%;
+  overflow-x: auto;
+  display: block; /* Ensure the container takes full width */
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid white;
+  padding: 20px;
+  text-align: left;
+  min-width: 100px; /* Define a minimum width for cells */
+  max-width: 420px; /* Define a maximum width for cells */
+  font-feature-settings: 'tnum'; /* Activate tabular numbers */
+  font-size: var(--type-micro);
+  letter-spacing: 1px;
+}
+
+td.right {
+  text-align: right;
+}
+
+th.right {
+  text-align: right;
+}
+
+/* Fix the first column on smaller screens */
+@media (max-width: 1024px) {
+  .table-container {
+    overflow-x: scroll;
+    border-left: 1px solid white; /* Add this line to keep the left border visible */
+  }
+  th:first-child, td:first-child {
+    position: sticky;
+    left: 0;
+    background-color: var(--col-pri-lille);
+    z-index: 1;
+    border-right: 1px solid white; /* Add this line to keep the right border visible */
+    min-width: 100px !important; /* Adjust the width as needed */
+    max-width: 100px !important; /* Ensure the max-width is also set to the same value */
+  }
+}
+
+
+/* HIGHLIGHT BOX */
+
+/* Default styles for list items */
+.highlight-box li {
+    font-family: var(--txt-display);
+    font-size: var(--type-l);
+    padding: 20px;
+    box-shadow: 0 0 0 1px white; /* Use box-shadow instead of border */
+}
+
+/* Remove box-shadow from the second li element */
+.highlight-box li:nth-child(2) {
+    box-shadow: 0px -1px 0 0px white, 0px 1px 0px 0px white /* Use box-shadow instead of border */
+}
+
+/* Media query for mobile (vertical alignment) */
+@media (max-width: 767px) {
+    .highlight-box {
+        display: flex;
+        flex-direction: column; /* Align vertically on mobile */
+
+    }
+
+    .highlight-box li {
+        box-shadow: 0 0 0 1px white; /* Use box-shadow instead of border */
+    }
+
+    .highlight-box li:nth-child(2) {
+        box-shadow: -1px 0px 0 0px white, 1px 0px 0px 0px white /* Use box-shadow instead of border */
+    }
+}
+
+/* Media query for desktop (horizontal alignment) */
+@media (min-width: 768px) {
+    .highlight-box {
+        display: flex;
+        justify-content: space-between; /* Align horizontally on desktop */
     }
 }

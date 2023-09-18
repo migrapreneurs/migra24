@@ -83,23 +83,23 @@
               });
           </script>
 
-      <div class="hero row middle-xs">
-        <div class="col-lg-8 col-lg-offset-1 col-xs-11 col-xs-offset-1 hero-text">
-          <h1 class="h1XL">The only migrant-focused talent gathering in Berlin.</h1>
-          <p class="S">Migrapreneur is a non-profit and the world’s largest gathering of VC – delivering actionable company-building advice and bringing together the who’s who in startups.</p>
-          <div class="col-xs-12 mar-t-80 hero-cta-container">
-            <a class="btn large bg-turquoise text-black S" href="#">Buy Tickets</a>
-            <div class="bg-yellow text-black S bold" id="countdown"></div>
+          <div class="hero row middle-xs">
+            <div class="col-lg-8 col-lg-offset-1 col-xs-11 col-xs-offset-1 hero-text">
+              <h1 class="h1XL">The only migrant-focused talent gathering in Berlin.</h1>
+              <p class="S">Migrapreneur is a non-profit and the world’s largest gathering of VC – delivering actionable company-building advice and bringing together the who’s who in startups.</p>
+              <div class="col-xs-12 mar-t-80 hero-cta-container">
+                <a class="btn large bg-turquoise text-black S" href="#">Buy Tickets</a>
+                <div class="bg-yellow text-black S bold" id="countdown"></div>
+              </div>
+
+            </div>
           </div>
 
-          </div>
-        </div>
-      </div>
         <main>
-          <section class="mar-t-120 col-xs-12">
+          <section class="row mar-t-60 col-xs-12">
             <div class="col-xs-12">
 
-              <div>
+              <div id="Typography" class="col-xs-12">
                   <h6 class="mar-b-60">Typography</h6>
                   <h1 class="h1XL">HeadlineXL</h1>
                   <h1>Headline H1</h1>
@@ -113,13 +113,13 @@
                   <p class="S">Increase your open rates and get more responses – powered by a well-tuned AI.</p>
                   <p class="XS">Increase your open rates and get more responses – powered by a well-tuned AI.</p>
               </div>
-              <div class="mar-t-80">
+              <div id="Buttons" class="mar-t-80">
                   <h6 class="mar-b-60">Buttons</h6>
                   <button class="btn large text-white bg-red">Button Large</button>
                   <button class="btn standard text-black bg-turquoise">Button Standard</button>
               </div>
 
-              <div class="mar-t-80">
+              <div id="StandardLists" class="mar-t-80">
                   <h6 class="mar-b-60">Standard Lists</h6>
                   <ul class="standard">
                     <li>Great opportunity to <b>connect with more</b> than 1000+ attendees.</li>
@@ -141,13 +141,14 @@
                     <li>Great opportunity to connect with more than 1000+ attendees.</li>
                   </ul>
               </div>
-              <div class="mar-t-80">
+              <div id="RoundedBoxes" class="mar-t-80">
                   <h6 class="mar-b-60">Rounded Boxes</h6>
                   <div class="rounded-box bg-yellow text-black">
                     <h3>Headline</h3>
                     <p class="S">Connect and stay in touch with other companies and platforms in other fields such as the medical and health field, media, education institutions and more...</p>
               </div>
-              <div class="mar-t-80">
+              <div id="Inputs" class="mar-t-80">
+                <h6 class="mar-b-60">Inputs</h6>
                 <div class="input-container">
                   <div class="input-wrapper">
                     <label for="input1">Label 1</label>
@@ -190,8 +191,8 @@
                 </div>
 
               </div>
-              <div class="mar-t-80">
-                <h6 class="mar-b-60">Flyouts</h6>
+              <div id="Accordions" class="mar-t-80">
+                <h6 class="mar-b-60">Accordions</h6>
                 <div class="faq-container">
                   <div class="faq-item">
                     <input type="checkbox" class="faq-toggle" id="faq1">
@@ -217,7 +218,8 @@
                 </div>
 
               </div>
-              <div class="mar-t-80">
+              <div id="Carousel" class="mar-t-80">
+                <h6 class="mar-b-60">Draggable Image Gallery</h6>
                 <script src="_assets/_script/gallery.js"></script>
                 <div class="gallery-container">
                   <div class="gallery">
@@ -246,6 +248,106 @@
                   <div class="gallery-bullets"></div>
                 </div>
               </div>
+              <div id="Cards" class="mar-t-80">
+                <h6 class="mar-b-60">Draggable Card List</h6>
+                <div class="card-list-container">
+                  <div class="card-list">
+                    <div class="card">
+                      <img src="_assets/_images/_speakers/speaker_1.jpg" alt="Ana Alvarez">
+                      <div class="card-text">
+                        <h3 class="L">Ana Alvarez</h3>
+                        <p>CEO and Co-Founder of Migrapreneur</p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img src="_assets/_images/_speakers/speaker_1.jpg" alt="Ana Alvarez">
+                      <div class="card-text">
+                        <h3 class="L">Ana Alvarez</h3>
+                        <p>CEO and Co-Founder of Migrapreneur</p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img src="_assets/_images/_speakers/speaker_1.jpg" alt="Ana Alvarez">
+                      <div class="card-text">
+                        <h3 class="L">Ana Alvarez</h3>
+                        <p>CEO and Co-Founder of Migrapreneur</p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img src="_assets/_images/_speakers/speaker_1.jpg" alt="Ana Alvarez">
+                      <div class="card-text">
+                        <h3 class="L">Ana Alvarez</h3>
+                        <p>CEO and Co-Founder of Migrapreneur</p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img src="_assets/_images/_speakers/speaker_1.jpg" alt="Ana Alvarez">
+                      <div class="card-text">
+                        <h3 class="L">Ana Alvarez</h3>
+                        <p>CEO and Co-Founder of Migrapreneur</p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img src="_assets/_images/_speakers/speaker_1.jpg" alt="Ana Alvarez">
+                      <div class="card-text">
+                        <h3 class="L">Ana Alvarez</h3>
+                        <p>CEO and Co-Founder of Migrapreneur</p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img src="_assets/_images/_speakers/speaker_1.jpg" alt="Ana Alvarez">
+                      <div class="card-text">
+                        <h3 class="L">Ana Alvarez</h3>
+                        <p>CEO and Co-Founder of Migrapreneur</p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img src="_assets/_images/_speakers/speaker_1.jpg" alt="Ana Alvarez">
+                      <div class="card-text">
+                        <h3 class="L">Ana Alvarez</h3>
+                        <p>CEO and Co-Founder of Migrapreneur</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div id="Cards" class="mar-t-80">
+                <h6 class="mar-b-60">Standard Table</h6>
+                <div class="table-container">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th class="bold first-column">Booth Type</th>
+                        <th>Description</th>
+                        <th>Unit Size</th>
+                        <th class="right">Unit Price</th>
+                        <th class="right">Total Price</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="bold first-column">Type A</td>
+                        <td>Data 1</td>
+                        <td>Data 2</td>
+                        <td class="right">Data 3</td>
+                        <td class="M right">€2,500.00</td>
+                      </tr>
+                      <tr>
+                        <td class="bold first-column">Type B</td>
+                        <td>Data 1</td>
+                        <td>Data 2</td>
+                        <td class="right">Data 3</td>
+                        <td class="M right">€7,500.00</td>
+                      </tr>
+                      <!-- Add more rows as needed -->
+                    </tbody>
+                  </table>
+                </div>
+
+
+              </div>
+
 
             </div>
           </section>

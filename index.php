@@ -1,38 +1,70 @@
 <?php include('init.php'); ?>
 
+
+<?php
+// URL of the JSON data
+$json_url = 'https://raw.githubusercontent.com/migrapreneurs/migra24/main/_data/meta.json';
+
+// Fetch the JSON data
+$json_data = file_get_contents($json_url);
+
+// Decode the JSON data into an associative array
+$metadata = json_decode($json_data, true);
+
+// Function to generate meta tags
+function generateMetaTags($metaArray) {
+    $metaTags = '';
+
+    foreach ($metaArray as $meta) {
+        $tag = '<meta ';
+
+        foreach ($meta as $key => $value) {
+            $tag .= $key . '="' . htmlspecialchars($value) . '" ';
+        }
+
+        $tag .= "/>\n";
+        $metaTags .= $tag;
+    }
+
+    return $metaTags;
+}
+
+// Generate the HTML meta tags
+$htmlMetaTags = generateMetaTags($metadata['metadata'][0]['meta']);
+
+
+// HOME DATA
+    $json_url = 'https://raw.githubusercontent.com/migrapreneurs/migra24/main/_data/migra-home.json';
+
+    // Fetch the JSON data
+    $json_data = file_get_contents($json_url);
+
+    // Decode the JSON data into an associative array
+    $jsonData = json_decode($json_data, true);
+?>
+
 <!doctype html>
   <html lang="<?= $LANG; ?>">
     <head>
       <meta charset="<?= $CHARSET; ?>">
 
       <base href="<?= $BASE; ?>">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name=robots content="noindex,nofollow">
-      <meta name="description" content="Craft winning outreach emails that hit home.">
-      <!-- Twitter Card data https://dev.twitter.com/cards/overview -->
-      <meta name="twitter:card" content="summary">
-      <meta name="twitter:site" content="@maddux">
-      <meta name="twitter:title" content="Maddux AI">
-      <meta name="twitter:description" content="Craft outreach emails that hit home.">
-      <meta name="twitter:creator" content="@maddux">
-      <meta name="twitter:image" content="https://res.cloudinary.com/vitobica/image/upload/v1688413082/getmaddux/sharing-image-maddux.jpg">
-      <!-- Open Graph data http://ogp.me/ -->
-      <meta property="og:title" content="Maddux AI – 📥 Craft outreach emails that hit home." />
-      <meta property="og:type" content="Website" />
-      <meta property="og:url" content="https://getmaddux.com" />
-      <meta property="og:image" content="https://res.cloudinary.com/vitobica/image/upload/v1688413082/getmaddux/sharing-image-maddux.jpg" />
-      <meta property="og:description" content="Craft winning outreach emails that hit home.">
-      <meta property="og:site_name" content="Maddux AI – 📥 Craft outreach emails that hit home." />
+
+
+      <?php echo $htmlMetaTags; ?>
+
+
       <link rel="icon" type="image/x-icon" href="favicon.ico">
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 
-      <link rel=“canonical“ href=“https://getmaddux.com“ />
+      <link rel=“canonical“ href=“https://migrafair.org“ />
 
 
 
-      <title>Maddux AI</title>
+      <title>Migra 24 – February 7th + 8th 2024, Berlin</title>
+
       <!-- cross browser support -->
 
       <!--[if lt IE 9]>
@@ -46,35 +78,107 @@
     </head>
     <body>
 
+      <script>
+              // Function to update the countdown
+              function updateCountdown() {
+                  // Set the deadline date
+                  const deadline = new Date("2024-02-07T00:00:00").getTime();
+
+                  // Update the countdown every 1 second
+                  const timer = setInterval(function () {
+                      const now = new Date().getTime();
+                      const timeRemaining = deadline - now;
+
+                      if (timeRemaining <= 0) {
+                          clearInterval(timer); // Stop the timer when the deadline is reached
+                      } else {
+                          const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+                          const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                          const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+
+                          document.getElementById("countdown").innerHTML = `<b>${days}</b> days <b>${hours}</b> hours <b>${minutes}</b> minutes`;
+                      }
+
+                      // Show the countdown div when the script is fired
+                      document.getElementById("countdown").style.display = "inline-block";
+
+                      // Remove the countdown div when timeRemaining <= 0
+                      if (timeRemaining <= 0) {
+                          document.getElementById("countdown").style.display = "none";
+                      }
+                  }, 1000);
+              }
+
+              // Run the updateCountdown function after the DOM is loaded
+              document.addEventListener("DOMContentLoaded", function () {
+                document.getElementById("countdown").style.display = "none";
+                  updateCountdown();
+              });
+          </script>
 
 
-        <header>
-	      <div id="LogoTL">
-		      <img src="_assets/_images/maddux-logo.svg" alt="Maddux Logo" width="140" height="30">
-	      </div>
-        </header>
+        <?php include('_assets/_script/header.php'); ?>
 
+
+        <!-- HERO STAGE -->
+        <div class="hero row middle-xs">
+          <div class="col-lg-8 col-lg-offset-1 col-xs-11 col-xs-offset-1 hero-text">
+            <h1 class="h1XL"><?php echo $jsonData['sections']['header']['title']; ?></h1>
+            <p class="S"><?php echo $jsonData['sections']['header']['subtitle']; ?></p>
+            <div class="col-xs-12 mar-t-80 hero-cta-container">
+              <a class="btn large bg-turquoise text-black S" href="#Tickets">Buy Tickets</a>
+              <div class="bg-yellow text-black S bold" id="countdown"></div>
+            </div>
+
+          </div>
+        </div>
 
 
         <main>
-          <section class="row col-xs-12">
-            <div class="row box col-xs-12 top-xs">
-              <div class="col-lg-6">
-                  <h1 class="h1 col-sm-9">Craft outreach emails that hit home.</h1>
-                  <p class="XXS col-sm-8">Increase your open rates and get more responses – powered by a well-tuned AI.</p>
-                  <p class="XSS col-sm-8 bold">Enjoy. Free for now. 50 emails per month.</p>
-                  <div class="col-xs-12">
-            	       <div class="mar-t-30 mar-b-60">
-                       <a class="btn btn-pri btn-large bold dot-red-2" href="https://app.getmaddux.com/build">📥&nbsp;&nbsp;&nbsp;Draft your first email</a>
-                     </div>
-                  </div>
-              </div>
-              <div class="col-lg-6 col-xs-12">
-                <img class="rounded-20" src="https://i.giphy.com/media/l2SpNZcHNUdJd89vG/giphy.webp" alt="" width="1460" height="800">
+          <!-- WHY ATTEND -->
+          <section id="Why" class="row mar-t-120 col-xs-12">
+            <h2 class="h1"><?php echo $jsonData['sections']['why']['title']; ?></h2>
+            <p class="L col-lg-8"><?php echo $jsonData['sections']['why']['subtitle']; ?></p>
+            <ul class="highlight-box col-xs-12 mar-t-40">
+              <?php
+              foreach ($jsonData['sections']['why']['benefits'] as $benefit) {
+                echo '<li class="">' . $benefit['text'] . '</li>';
+              }
+              ?>
+            </ul>
+          </section>
 
+          <section id="Why" class="row mar-t-120 col-xs-12">
+            <h2 class="h1"><?php echo $jsonData['sections']['why']['title']; ?></h2>
+            <p class="L col-lg-8"><?php echo $jsonData['sections']['why']['subtitle']; ?></p>
+            <ul class="highlight-box col-xs-12 mar-t-40">
+              <?php
+              foreach ($jsonData['sections']['why']['benefits'] as $benefit) {
+                echo '<li class="">' . $benefit['text'] . '</li>';
+              }
+              ?>
+            </ul>
+          </section>
+
+          <!-- SPEAKERS -->
+          <div id="Speakers" class="mar-t-80">
+            <h6 class="mar-b-60">Draggable Card List</h6>
+            <div class="card-list-container">
+              <div class="card-list">
+                <?php
+            foreach ($jsonData['sections']['speakers'] as $speaker) {
+                if (!empty($speaker['fullname']) && !empty($speaker['jobtitle']) && !empty($speaker['url'])) { ?>
+                <div class="card">
+                  <img src="https://res.cloudinary.com/migrapreneur/image/upload/dpr_2.0,e_sharpen:139,q_auto:best/v1695030494/migra24/speakers/<?= $speaker['url']; ?>" alt="<?= $speaker['fullname']; ?>">
+                  <div class="card-text">
+                    <h3 class="L"><?= $speaker['fullname']; ?></h3>
+                    <p><?= $speaker['jobtitle']; ?></p>
+                  </div>
+                </div>
+              <?php }} ?>
               </div>
             </div>
-          </section>
+          </div>
 
         </main>
 
@@ -84,3 +188,8 @@
 
     </body>
   </html>
+
+  <?php
+  error_reporting(E_ALL);
+ini_set('display_errors', 1);
+ ?>
