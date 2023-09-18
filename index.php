@@ -48,8 +48,10 @@ if ($json_data === false) {
     if ($jsonData === null) {
         // Handle JSON decoding error, e.g., echo a decoding error message
         echo "Error decoding JSON data.";
-    } 
+    }
 }
+
+var_dump($jsonData);
 
 ?>
 
@@ -207,20 +209,19 @@ if ($json_data === false) {
               <h2 class="h1 mar-b-60">Frequently Asked Questions</h2>
               <?php
               foreach ($jsonData['sections']['faq'] as $faqItem) {
-                if (!empty($faqItem['question']) && !empty($faqItem['answer'])) {
+                //if (!empty($faqItem['question']) && !empty($faqItem['answer'])) {
                   $count = +1;
                   $faqNum = "faq".$count;
-                  echo $faqNum;
 
                   ?>
               <div class="faq-item">
-                <input type="checkbox" class="faq-toggle" id="faq1">
-                <label for="faq1" class="faq-question">Question 1</label>
+                <input type="checkbox" class="faq-toggle" id="<?= $faqNum; ?>">
+                <label for="<?= $faqNum; ?>" class="faq-question"><?= $faqItem['question']; ?></label>
                 <div class="faq-answer">
-                  Answer 1 goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  <?= $faqItem['answer']; ?>
                 </div>
               </div>
-            <?php }} ?>
+            <?php } ?>
 
             </div>
           </section>
