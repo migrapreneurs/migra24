@@ -194,14 +194,13 @@ main::-webkit-scrollbar-thumb {
 }
 
 section {
-  margin-bottom: calc(60px + (120 - 60) * ((100vw - 375px) / (1600 - 375)));
+  padding-top: calc(60px + (160 - 60) * ((100vw - 375px) / (1600 - 375)));
+  padding-bottom: calc(60px + (80 - 60) * ((100vw - 375px) / (1600 - 375)));
   margin-left: calc(0px + (120 - 0) * ((100vw - 375px) / (1600 - 375)));
   margin-right: calc(0px + (120 - 0) * ((100vw - 375px) / (1600 - 375)));
 }
 
-section:last-child {
-  margin-bottom: 0;
-}
+
 
 footer {
   padding: 20px 0;
@@ -388,7 +387,7 @@ footer {
 .card img {
   max-width: 100%;
   height: auto;
-  border-radius: calc(20px + (80 - 20) * ((100vw - 375px) / (1600 - 375)));
+  border-radius: calc(20px + (40 - 20) * ((100vw - 375px) / (1600 - 375)));
   border: 1px solid transparent;
 }
 
@@ -481,7 +480,7 @@ th.right {
 /* Default styles for list items */
 .highlight-box li {
     font-family: var(--txt-display);
-    font-size: var(--type-l);
+    font-size: var(--type-s);
     padding: 20px;
     box-shadow: 0 0 0 1px white; /* Use box-shadow instead of border */
 }
