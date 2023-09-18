@@ -33,14 +33,27 @@ function generateMetaTags($metaArray) {
 $htmlMetaTags = generateMetaTags($metadata['metadata'][0]['meta']);
 
 
-// HOME DATA
-    $json_url = 'https://raw.githubusercontent.com/migrapreneurs/migra24/main/_data/migra-home.json';
+$json_url = 'https://raw.githubusercontent.com/migrapreneurs/migra24/main/_data/migra-home.json';
 
-    // Fetch the JSON data
-    $json_data = file_get_contents($json_url);
+// Fetch the JSON data
+$json_data = @file_get_contents($json_url);
 
+if ($json_data === false) {
+    // Handle error, e.g., echo an error message
+    echo "Error fetching JSON data.";
+} else {
     // Decode the JSON data into an associative array
     $jsonData = json_decode($json_data, true);
+
+    if ($jsonData === null) {
+        // Handle JSON decoding error, e.g., echo a decoding error message
+        echo "Error decoding JSON data.";
+    } else {
+        // JSON data successfully decoded, proceed with your logic
+        var_dump($jsonData);
+    }
+}
+
 
 ?>
 
@@ -198,7 +211,12 @@ $htmlMetaTags = generateMetaTags($metadata['metadata'][0]['meta']);
               <h2 class="h1 mar-b-60">Frequently Asked Questions</h2>
               <?php
               foreach ($jsonData['sections']['faq'] as $faqItem) {
-                if (!empty($faqItem['question']) && !empty($faqItem['answer'])) { ?>
+                if (!empty($faqItem['question']) && !empty($faqItem['answer'])) {
+                  $count = +1;
+                  $faqNum = "faq".$count;
+                  echo $faqNum;
+
+                  ?>
               <div class="faq-item">
                 <input type="checkbox" class="faq-toggle" id="faq1">
                 <label for="faq1" class="faq-question">Question 1</label>
