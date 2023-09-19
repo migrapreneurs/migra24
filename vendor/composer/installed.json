@@ -1,0 +1,170 @@
+{
+    "packages": [
+        {
+            "name": "davedevelopment/stiphle",
+            "version": "0.9.4",
+            "version_normalized": "0.9.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/davedevelopment/stiphle.git",
+                "reference": "5d1c244f0525d265e231a65db538b74eb5483768"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/davedevelopment/stiphle/zipball/5d1c244f0525d265e231a65db538b74eb5483768",
+                "reference": "5d1c244f0525d265e231a65db538b74eb5483768",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.6.0|^7.0|^8.0"
+            },
+            "require-dev": {
+                "doctrine/cache": "^1.0",
+                "phpunit/phpunit": "^6.5|^7.5|^8.4",
+                "predis/predis": "^1.1",
+                "zendframework/zend-cache": "^2.8"
+            },
+            "suggest": {
+                "doctrine/cache": "~1.0",
+                "predis/predis": "~1.1",
+                "zendframework/zend-cache": "^2.8"
+            },
+            "time": "2022-11-25T16:30:20+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-0": {
+                    "Stiphle": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dave Marshall",
+                    "email": "dave.marshall@atstsolutions.co.uk",
+                    "homepage": "http://davedevelopment.co.uk"
+                }
+            ],
+            "description": "Simple rate limiting/throttling for php",
+            "homepage": "http://github.com/davedevelopment/stiphle",
+            "keywords": [
+                "rate limit",
+                "rate limiting",
+                "throttle",
+                "throttling"
+            ],
+            "support": {
+                "issues": "https://github.com/davedevelopment/stiphle/issues",
+                "source": "https://github.com/davedevelopment/stiphle/tree/0.9.4"
+            },
+            "install-path": "../davedevelopment/stiphle"
+        },
+        {
+            "name": "sleiman/airtable-php",
+            "version": "3.0.0",
+            "version_normalized": "3.0.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sleiman/airtable-php.git",
+                "reference": "21cc4d887e2a7660260bb769b9711eb36b946aed"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sleiman/airtable-php/zipball/21cc4d887e2a7660260bb769b9711eb36b946aed",
+                "reference": "21cc4d887e2a7660260bb769b9711eb36b946aed",
+                "shasum": ""
+            },
+            "require": {
+                "davedevelopment/stiphle": "^0.9.2",
+                "php": ">=8.0"
+            },
+            "time": "2022-11-01T14:22:39+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "TANIOS\\Airtable\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A PHP wrapper for the Airtable API",
+            "support": {
+                "issues": "https://github.com/sleiman/airtable-php/issues",
+                "source": "https://github.com/sleiman/airtable-php/tree/v3.0.0"
+            },
+            "install-path": "../sleiman/airtable-php"
+        },
+        {
+            "name": "stripe/stripe-php",
+            "version": "v10.20.0",
+            "version_normalized": "10.20.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/stripe/stripe-php.git",
+                "reference": "6be8827ee0d6466bf48e2b6997a8feac596405f9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/6be8827ee0d6466bf48e2b6997a8feac596405f9",
+                "reference": "6be8827ee0d6466bf48e2b6997a8feac596405f9",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "3.5.0",
+                "php-coveralls/php-coveralls": "^2.5",
+                "phpstan/phpstan": "^1.2",
+                "phpunit/phpunit": "^5.7 || ^9.0",
+                "squizlabs/php_codesniffer": "^3.3"
+            },
+            "time": "2023-08-03T20:01:03+00:00",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Stripe\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Stripe and contributors",
+                    "homepage": "https://github.com/stripe/stripe-php/contributors"
+                }
+            ],
+            "description": "Stripe PHP Library",
+            "homepage": "https://stripe.com/",
+            "keywords": [
+                "api",
+                "payment processing",
+                "stripe"
+            ],
+            "support": {
+                "issues": "https://github.com/stripe/stripe-php/issues",
+                "source": "https://github.com/stripe/stripe-php/tree/v10.20.0"
+            },
+            "install-path": "../stripe/stripe-php"
+        }
+    ],
+    "dev": true,
+    "dev-package-names": []
+}

@@ -219,22 +219,27 @@ if ($json_data === false) {
 
           $tickets = $json_data['tickets'];
 
+          // Get the current date and time in UTC
+          $currentDate = new DateTime('now', new DateTimeZone('UTC'));
+          // Parse the earlybird end date from the JSON
+          $earlybirdEndDate = new DateTime($json_data['general']['earlybird-end_date']);
+
+          $endDateEarlyBird = $earlybirdEndDate->format('F, jS Y');
+
           ?>
 
           <section id="Tickets">
             <h2 class="h1"><?= $json_data['general']['title'];?></h2>
-            <p class="M"><?= $json_data['general']['subtitle'];?></p>
+            <p class="M"><?= $json_data['general']['subtitle']." ".$endDateEarlyBird."."; ?></p>
             <div class="mar-t-60 ticket-container">
               <?php
-              // Get the current date and time in UTC
-              $currentDate = new DateTime('now', new DateTimeZone('UTC'));
+
 
               foreach ($tickets as $ticket) {
                 $fullColorClass = $ticket['text_color'];
                 $colorName = substr($fullColorClass, strlen("text-"));
 
-                // Parse the earlybird end date from the JSON
-                $earlybirdEndDate = new DateTime($json_data['general']['earlybird-end_date']);
+
 
                 // Check if the current date is before the earlybird end date
                 if ($currentDate <= $earlybirdEndDate) {
