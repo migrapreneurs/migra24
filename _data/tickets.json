@@ -1,4 +1,9 @@
 {
+  "general": {
+    "earlybird-end_date": "2023-10-13T00:00:00.000Z",
+    "title": "Get your Early Bird Tickets Now",
+    "subtitle" : "Take advantage of 19% discount until October 18, 2023."
+  },
   "tickets": [
     {
       "pass-id" : 1,
