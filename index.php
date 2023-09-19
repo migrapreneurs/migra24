@@ -200,139 +200,50 @@ if ($json_data === false) {
 
 
           <!-- TICKETS -->
+          <?php
+          // Fetch and decode the JSON data
+          $tickets_json_url = 'https://raw.githubusercontent.com/migrapreneurs/migra24/main/_data/tickets.json';
+          $ticket_data = @file_get_contents($tickets_json_url);
+
+          if ($ticket_data === false) {
+            echo "Error fetching JSON data.";
+            exit;
+          }
+
+          $json_data = json_decode($ticket_data, true);
+
+          if ($json_data === null || !isset($json_data['tickets'])) {
+            echo "Error decoding JSON data or missing 'tickets' key.";
+            exit;
+          }
+
+          $tickets = $json_data['tickets'];
+          ?>
+
           <section id="Tickets">
             <h2 class="h1">Get your tickets now</h2>
             <div class="mar-t-60 ticket-container">
-                <div class="ticket rounded-box bg-yellow text-black">
-                  <h3>Startup Pass</h3>
+              <?php foreach ($tickets as $ticket) { ?>
+                <div class="ticket rounded-box <?php echo $ticket['background_color']; ?> <?php echo $ticket['text_color']; ?>">
+                  <h3><?php echo $ticket['title']; ?></h3>
                   <div class="price-tag mar-b-20">
-                    <span class="price">395€</span>
+                    <span class="price"><?php echo $ticket['price']; ?>€</span>
                     <span class="line"></span>
                     <span class="denominator">ticket*</span>
                   </div>
                   <ul class="circle black mar-b-20">
-                    <li>2-day ticket Migra24.</li>
-                    <li>Migra Week Side Events</li>
-                    <li>Migra Matchmaking Tool & pre-bookable tables in the meeting area</li>
-                    <li>Founders Day (Feb 7th)</li>
+                    <?php foreach ($ticket['content'] as $bullet) { ?>
+                      <li><?php echo $bullet; ?></li>
+                    <?php } ?>
                   </ul>
                   <p class="XXS">* limited capacity, registration required.</p>
-                  <a class="btn standard bg-black text-white S mar-t-20" href="#">Buy Startup Pass</a>
+                  <a class="btn standard bg-black text-white S mar-t-20" href="<?php echo $ticket['checkout_url']; ?>">Buy <?php echo $ticket['title']; ?></a>
                 </div>
-                <div class="ticket rounded-box bg-yellow text-black">
-                  <h3>Startup Pass</h3>
-                  <div class="price-tag mar-b-20">
-                    <span class="price">395€</span>
-                    <span class="line"></span>
-                    <span class="denominator">ticket*</span>
-                  </div>
-                  <ul class="circle black mar-b-20">
-                    <li>2-day ticket Migra24.</li>
-                    <li>Migra Week Side Events</li>
-                    <li>Migra Matchmaking Tool & pre-bookable tables in the meeting area</li>
-                    <li>Founders Day (Feb 7th)</li>
-                  </ul>
-                  <p class="XXS">* limited capacity, registration required.</p>
-                  <a class="btn standard bg-black text-white S mar-t-20" href="#">Buy Startup Pass</a>
-                </div>
-                <div class="ticket rounded-box bg-yellow text-black">
-                  <h3>Startup Pass</h3>
-                  <div class="price-tag mar-b-20">
-                    <span class="price">395€</span>
-                    <span class="line"></span>
-                    <span class="denominator">ticket*</span>
-                  </div>
-                  <ul class="circle black mar-b-20">
-                    <li>2-day ticket Migra24.</li>
-                    <li>Migra Week Side Events</li>
-                    <li>Migra Matchmaking Tool & pre-bookable tables in the meeting area</li>
-                    <li>Founders Day (Feb 7th)</li>
-                  </ul>
-                  <p class="XXS">* limited capacity, registration required.</p>
-                  <a class="btn standard bg-black text-white S mar-t-20" href="#">Buy Startup Pass</a>
-                </div>
-                <div class="ticket rounded-box bg-yellow text-black">
-                  <h3>Startup Pass</h3>
-                  <div class="price-tag mar-b-20">
-                    <span class="price">395€</span>
-                    <span class="line"></span>
-                    <span class="denominator">ticket*</span>
-                  </div>
-                  <ul class="circle black mar-b-20">
-                    <li>2-day ticket Migra24.</li>
-                    <li>Migra Week Side Events</li>
-                    <li>Migra Matchmaking Tool & pre-bookable tables in the meeting area</li>
-                    <li>Founders Day (Feb 7th)</li>
-                  </ul>
-                  <p class="XXS">* limited capacity, registration required.</p>
-                  <a class="btn standard bg-black text-white S mar-t-20" href="#">Buy Startup Pass</a>
-                </div>
-                <div class="ticket rounded-box bg-yellow text-black">
-                  <h3>Startup Pass</h3>
-                  <div class="price-tag mar-b-20">
-                    <span class="price">395€</span>
-                    <span class="line"></span>
-                    <span class="denominator">ticket*</span>
-                  </div>
-                  <ul class="circle black mar-b-20">
-                    <li>2-day ticket Migra24.</li>
-                    <li>Migra Week Side Events</li>
-                    <li>Migra Matchmaking Tool & pre-bookable tables in the meeting area</li>
-                    <li>Founders Day (Feb 7th)</li>
-                  </ul>
-                  <p class="XXS">* limited capacity, registration required.</p>
-                  <a class="btn standard bg-black text-white S mar-t-20" href="#">Buy Startup Pass</a>
-                </div>
-                <div class="ticket rounded-box bg-yellow text-black">
-                  <h3>Startup Pass</h3>
-                  <div class="price-tag mar-b-20">
-                    <span class="price">395€</span>
-                    <span class="line"></span>
-                    <span class="denominator">ticket*</span>
-                  </div>
-                  <ul class="circle black mar-b-20">
-                    <li>2-day ticket Migra24.</li>
-                    <li>Migra Week Side Events</li>
-                    <li>Migra Matchmaking Tool & pre-bookable tables in the meeting area</li>
-                    <li>Founders Day (Feb 7th)</li>
-                  </ul>
-                  <p class="XXS">* limited capacity, registration required.</p>
-                  <a class="btn standard bg-black text-white S mar-t-20" href="#">Buy Startup Pass</a>
-                </div>
-                <div class="ticket rounded-box bg-yellow text-black">
-                  <h3>Startup Pass</h3>
-                  <div class="price-tag mar-b-20">
-                    <span class="price">395€</span>
-                    <span class="line"></span>
-                    <span class="denominator">ticket*</span>
-                  </div>
-                  <ul class="circle black mar-b-20">
-                    <li>2-day ticket Migra24.</li>
-                    <li>Migra Week Side Events</li>
-                    <li>Migra Matchmaking Tool & pre-bookable tables in the meeting area</li>
-                    <li>Founders Day (Feb 7th)</li>
-                  </ul>
-                  <p class="XXS">* limited capacity, registration required.</p>
-                  <a class="btn standard bg-black text-white S mar-t-20" href="#">Buy Startup Pass</a>
-                </div>
-                <div class="ticket rounded-box bg-yellow text-black">
-                  <h3>Startup Pass</h3>
-                  <div class="price-tag mar-b-20">
-                    <span class="price">395€</span>
-                    <span class="line"></span>
-                    <span class="denominator">ticket*</span>
-                  </div>
-                  <ul class="circle black mar-b-20">
-                    <li>2-day ticket Migra24.</li>
-                    <li>Migra Week Side Events</li>
-                    <li>Migra Matchmaking Tool & pre-bookable tables in the meeting area</li>
-                    <li>Founders Day (Feb 7th)</li>
-                  </ul>
-                  <p class="XXS">* limited capacity, registration required.</p>
-                  <a class="btn standard bg-black text-white S mar-t-20" href="#">Buy Startup Pass</a>
-                </div>
-              </div>
+              <?php } ?>
+            </div>
           </section>
+
+
 
 
 

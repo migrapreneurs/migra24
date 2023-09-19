@@ -1,68 +1,68 @@
 {
   "tickets": [
     {
-      "title": "Early Bird Ticket",
-      "price": 199,
+      "title": "General Tickets",
+      "price": 11,
       "content": [
         "Full access to conference sessions",
         "Networking opportunities",
         "Lunch and refreshments included"
       ],
       "checkout_url": "https://example.com/checkout/earlybird",
-      "background_color": "bg-green",
-      "text_color": "text-white"
+      "background_color": "bg-pea-light",
+      "text_color": "text-black"
     },
     {
-      "title": "Standard Ticket",
-      "price": 249,
+      "title": "Unemployed Pass",
+      "price": 0,
       "content": [
         "Full access to conference sessions",
         "Networking opportunities",
         "Lunch and refreshments included"
       ],
       "checkout_url": "https://example.com/checkout/standard",
-      "background_color": "bg-blue",
-      "text_color": "text-white"
+      "background_color": "bg-beige-light",
+      "text_color": "text-black"
     },
     {
-      "title": "VIP Ticket",
-      "price": 349,
+      "title": "LGBTQ+ Pass",
+      "price": 0,
       "content": [
         "Priority access to conference sessions",
         "Exclusive VIP lounge access",
         "Gourmet meals and beverages"
       ],
       "checkout_url": "https://example.com/checkout/vip",
-      "background_color": "bg-gold",
+      "background_color": "bg-peach",
       "text_color": "text-black"
     },
     {
-      "title": "Student Ticket",
-      "price": 99,
+      "title": "Investor Pass",
+      "price": 179,
       "content": [
         "Full access to conference sessions",
         "Networking opportunities",
         "Valid student ID required"
       ],
       "checkout_url": "https://example.com/checkout/student",
-      "background_color": "bg-purple",
+      "background_color": "bg-shade-black-2",
       "text_color": "text-white"
     },
     {
-      "title": "Group Ticket (5+)",
-      "price": 199,
+      "title": "Corporate Pass",
+      "price": 179,
       "content": [
         "Full access to conference sessions",
         "Networking opportunities",
         "Lunch and refreshments included"
       ],
       "checkout_url": "https://example.com/checkout/group",
-      "background_color": "bg-orange",
-      "text_color": "text-black"
+      "background_color": "bg-lille",
+      "text_color": "text-white"
     },
     {
-      "title": "Speaker Ticket",
-      "price": 0,
+      "title": "Startup Pass",
+      "price": 36,
       "content": [
         "Speaker and presenter access",
         "Full access to all sessions",
@@ -73,8 +73,8 @@
       "text_color": "text-white"
     },
     {
-      "title": "Exhibitor Ticket",
-      "price": 299,
+      "title": "Press and Influencers",
+      "price": 0,
       "content": [
         "Exhibitor booth access",
         "Full access to conference sessions",
