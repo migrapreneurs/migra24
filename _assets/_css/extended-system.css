@@ -481,6 +481,7 @@ th, td {
   font-feature-settings: 'tnum'; /* Activate tabular numbers */
   font-size: var(--type-micro);
   letter-spacing: 1px;
+  white-space: normal; /* Make text wrap within td elements */
 }
 
 td.right {

@@ -51,7 +51,6 @@ if ($json_data === false) {
     }
 }
 
-var_dump($jsonData['sections']['faq']);
 
 ?>
 
@@ -144,27 +143,23 @@ var_dump($jsonData['sections']['faq']);
             <script src="_assets/_script/gallery.js"></script>
             <div class="gallery-container">
               <div class="gallery">
+                <?php
+                var_dump($jsonData['sections']['venue']['images']);
+                foreach ($jsonData['sections']['venue'][0]['images'] as $galleryItem) { ?>
+
                 <div class="gallery-slide">
                   <picture>
                     <!-- Define your <source> elements for various screen widths here -->
-                    <source media="(min-width: 2000px)" srcset="https://placehold.co/2400x1200/FF3300/FFFFFF" type="image/webp">
-                    <source media="(min-width: 1025px)" srcset="https://placehold.co/1200x600/FF3300/FFFFFF" type="image/webp">
-                    <source media="(min-width: 767px)" srcset="https://placehold.co/800x500/FF3300/FFFFFF" type="image/webp">
-                    <source media="(min-width: 300px)" srcset="https://placehold.co/400x500/FF3300/FFFFFF" type="image/webp">
-                    <img src="https://placehold.co/400x300/FF3300/FFFFFF" alt="Image 1" width="1460" height="800">
+                    <source media="(min-width: 2000px)" srcset="https://res.cloudinary.com/migrapreneur/image/upload/c_fit,dpr_2.0,e_sharpen:100,h_1200,w_2400/v1695119585/migra24/motorwerk/<?= $galleryItem['url']; ?>" type="image/webp">
+                    <source media="(min-width: 1025px)" srcset="https://res.cloudinary.com/migrapreneur/image/upload/c_fit,dpr_2.0,e_sharpen:100,h_600,w_1200/v1695119585/migra24/motorwerk/<?= $galleryItem['url']; ?>" type="image/webp">
+                    <source media="(min-width: 767px)" srcset="https://res.cloudinary.com/migrapreneur/image/upload/c_fit,dpr_2.0,e_sharpen:100,h_500,w_800/v1695119585/migra24/motorwerk/<?= $galleryItem['url']; ?>" type="image/webp">
+                    <source media="(min-width: 300px)" srcset="https://res.cloudinary.com/migrapreneur/image/upload/c_fit,dpr_2.0,e_sharpen:100,h_400,w_500/v1695119585/migra24/motorwerk/<?= $galleryItem['url']; ?>" type="image/webp">
+                    <img src="https://res.cloudinary.com/migrapreneur/image/upload/c_fit,dpr_2.0,e_sharpen:100,h_300,w_400/v1695119585/migra24/motorwerk/<?= $galleryItem['url']; ?>" width="1460" height="800">
                   </picture>
                 </div>
-                <div class="gallery-slide">
-                  <picture>
-                    <!-- Define your <source> elements for various screen widths here -->
-                    <source media="(min-width: 2000px)" srcset="https://placehold.co/2400x1200/FFFFFF/FF3300" type="image/webp">
-                    <source media="(min-width: 1025px)" srcset="https://placehold.co/1200x600/FFFFFF/FF3300" type="image/webp">
-                    <source media="(min-width: 767px)" srcset="https://placehold.co/800x500/FFFFFF/FF3300" type="image/webp">
-                    <source media="(min-width: 300px)" srcset="https://placehold.co/400x500/FFFFFF/FF3300" type="image/webp">
-                    <img src="https://placehold.co/400x300/FFFFFF/FF3300" alt="Image 1" width="1460" height="800">
-                  </picture>
-                </div>
-                <!-- Add more .gallery-slide divs for additional images -->
+              <?php } ?>
+
+
               </div>
               <div class="gallery-bullets"></div>
             </div>
@@ -197,34 +192,41 @@ var_dump($jsonData['sections']['faq']);
 
             </div>
             <div class="table-container">
+              <?php
+              // Your JSON data
+              $boothTypes = $jsonData['sections']['boothplans']['boothtypes'][0]['items'];
+              $tableHeaders = $jsonData['sections']['boothplans']['boothtypes'][0]['tableheaders'];
+
+              function formatCurrency($amount) {
+                // Format the number as currency with Euro (€) symbol
+                $formattedAmount = '€' . number_format($amount, 2, '.', ',');
+
+                return $formattedAmount;
+              }
+              ?>
+
               <table>
-                <thead>
-                  <tr>
-                    <th class="bold first-column">Booth Type</th>
-                    <th>Description</th>
-                    <th>Unit Size</th>
-                    <th class="right">Unit Price</th>
-                    <th class="right">Total Price</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="bold first-column">Type A</td>
-                    <td>Data 1</td>
-                    <td>Data 2</td>
-                    <td class="right">Data 3</td>
-                    <td class="M right">€2,500.00</td>
-                  </tr>
-                  <tr>
-                    <td class="bold first-column">Type B</td>
-                    <td>Data 1</td>
-                    <td>Data 2</td>
-                    <td class="right">Data 3</td>
-                    <td class="M right">€7,500.00</td>
-                  </tr>
-                  <!-- Add more rows as needed -->
-                </tbody>
+                  <thead>
+                      <tr>
+                          <?php foreach ($tableHeaders as $header): ?>
+                              <th class="bold first-column"><?= $header ?></th>
+                          <?php endforeach; ?>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <?php foreach ($boothTypes as $item): ?>
+                          <tr>
+                              <td class="bold first-column"><?= $item['booth-type'] ?></td>
+                              <td><?= $item['description'] ?></td>
+                              <td><?= $item['unit-size'] ?></td>
+                              <td class="right"><?= formatCurrency($item['unit-price']); ?></td>
+                              <td class="right"><?= formatCurrency($item['total-price']); ?></td>
+                          </tr>
+                      <?php endforeach; ?>
+                  </tbody>
               </table>
+
+
             </div>
 
 
