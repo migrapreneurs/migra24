@@ -143,46 +143,19 @@ if ($json_data === false) {
             <script src="_assets/_script/gallery.js"></script>
             <div class="gallery-container">
               <div class="gallery">
-                <?php
-                // Assume you have your JSON data in $jsonData
-
-                // Check if "sections" section exists in JSON data
-                if (isset($jsonData['sections']) && is_array($jsonData['sections'])) {
-                    // Check if "venue" section exists within "sections"
-                    if (isset($jsonData['sections']['venue']) && is_array($jsonData['sections']['venue'])) {
-                        // Check if "images" section exists within "venue"
-                        if (isset($jsonData['sections']['venue'][0]['images']) && is_array($jsonData['sections']['venue'][0]['images'])) {
-                            // Access and loop through the "images" array
-                            $images = $jsonData['sections']['venue'][0]['images'];
-                            foreach ($images as $image) {
-                                echo "Image URL: " . $image['url'] . "<br>";
-                            }
-                        } else {
-                            // Images section not found in "venue"
-                            echo 'Venue images not available.';
-                        }
-                    } else {
-                        // Venue section not found in "sections"
-                        echo 'Venue not available.';
-                    }
-                } else {
-                    // "Sections" section not found in JSON data
-                    echo 'Sections not available.';
-                }
-                ?>
 
                 <?php
                 var_dump($jsonData['sections']['venue']['images']);
-                foreach ($jsonData['sections']['venue'][0]['images'] as $galleryItem) { ?>
+                foreach ($jsonData['sections']['venue']['images'] as $galleryItem) { ?>
 
                 <div class="gallery-slide">
                   <picture>
                     <!-- Define your <source> elements for various screen widths here -->
-                    <source media="(min-width: 2000px)" srcset="https://res.cloudinary.com/migrapreneur/image/upload/c_fit,dpr_2.0,e_sharpen:100,h_1200,w_2400/v1695119585/migra24/motorwerk/<?= $galleryItem['url']; ?>" type="image/webp">
-                    <source media="(min-width: 1025px)" srcset="https://res.cloudinary.com/migrapreneur/image/upload/c_fit,dpr_2.0,e_sharpen:100,h_600,w_1200/v1695119585/migra24/motorwerk/<?= $galleryItem['url']; ?>" type="image/webp">
-                    <source media="(min-width: 767px)" srcset="https://res.cloudinary.com/migrapreneur/image/upload/c_fit,dpr_2.0,e_sharpen:100,h_500,w_800/v1695119585/migra24/motorwerk/<?= $galleryItem['url']; ?>" type="image/webp">
-                    <source media="(min-width: 300px)" srcset="https://res.cloudinary.com/migrapreneur/image/upload/c_fit,dpr_2.0,e_sharpen:100,h_400,w_500/v1695119585/migra24/motorwerk/<?= $galleryItem['url']; ?>" type="image/webp">
-                    <img src="https://res.cloudinary.com/migrapreneur/image/upload/c_fit,dpr_2.0,e_sharpen:100,h_300,w_400/v1695119585/migra24/motorwerk/<?= $galleryItem['url']; ?>" width="1460" height="800">
+                    <source media="(min-width: 2000px)" srcset="https://res.cloudinary.com/migrapreneur/image/upload/c_fit,dpr_2.0,e_sharpen:100,h_1200,w_2400/migra24/motorwerk/<?= $galleryItem['url']; ?>" type="image/webp">
+                    <source media="(min-width: 1025px)" srcset="https://res.cloudinary.com/migrapreneur/image/upload/c_fit,dpr_2.0,e_sharpen:100,h_600,w_1200/migra24/motorwerk/<?= $galleryItem['url']; ?>" type="image/webp">
+                    <source media="(min-width: 767px)" srcset="https://res.cloudinary.com/migrapreneur/image/upload/c_fit,dpr_2.0,e_sharpen:100,h_500,w_800/migra24/motorwerk/<?= $galleryItem['url']; ?>" type="image/webp">
+                    <source media="(min-width: 300px)" srcset="https://res.cloudinary.com/migrapreneur/image/upload/c_fit,dpr_1.0,e_sharpen:100,h_400,w_500/migra24/motorwerk/<?= $galleryItem['url']; ?>" type="image/webp">
+                    <img src="https://res.cloudinary.com/migrapreneur/image/upload/c_fit,dpr_1.0,e_sharpen:100,h_300,w_400/migra24/motorwerk/<?= $galleryItem['url']; ?>" width="1460" height="800">
                   </picture>
                 </div>
               <?php } ?>
