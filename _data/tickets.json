@@ -15,7 +15,8 @@
         "Networking opportunities",
         "Lunch and refreshments included"
       ],
-      "checkout_url": "https://buy.stripe.com/test_00g9Ddc7bgRz7JK9AE",
+      "checkout_url_early": "https://buy.stripe.com/test_00g9Ddc7bgRz7JK9AE",
+      "checkout_url_standard": "https://buy.stripe.com/test_00g9Ddc7bgRz7JK9AE",
       "background_color": "bg-pea-light",
       "text_color": "text-black"
     },
@@ -29,7 +30,8 @@
         "Networking opportunities",
         "Lunch and refreshments included"
       ],
-      "checkout_url": "http://192.168.2.112/migra24/register?pass-id=2&status=paid",
+      "checkout_url_early": "http://192.168.2.112/migra24/register?pass-id=2&status=paid",
+      "checkout_url_standard": "http://192.168.2.112/migra24/register?pass-id=2&status=paid",
       "background_color": "bg-pea-light",
       "text_color": "text-black"
     },
@@ -43,7 +45,8 @@
         "Exclusive VIP lounge access",
         "Gourmet meals and beverages"
       ],
-      "checkout_url": "http://192.168.2.112/migra24/register?pass-id=3&status=paid",
+      "checkout_url_early": "http://192.168.2.112/migra24/register?pass-id=3&status=paid",
+      "checkout_url_standard": "http://192.168.2.112/migra24/register?pass-id=3&status=paid",
       "background_color": "bg-peach",
       "text_color": "text-black"
     },
@@ -57,7 +60,8 @@
         "Networking opportunities",
         "Valid student ID required"
       ],
-      "checkout_url": "https://example.com/checkout/student",
+      "checkout_url_early": "",
+      "checkout_url_standard": "",
       "background_color": "bg-shade-black-2",
       "text_color": "text-white"
     },
@@ -71,7 +75,8 @@
         "Networking opportunities",
         "Lunch and refreshments included"
       ],
-      "checkout_url": "https://example.com/checkout/group",
+      "checkout_url_early": "",
+      "checkout_url_standard": "",
       "background_color": "bg-lille",
       "text_color": "text-white"
     },
@@ -85,7 +90,8 @@
         "Full access to all sessions",
         "VIP lounge access"
       ],
-      "checkout_url": "https://example.com/checkout/speaker",
+      "checkout_url_early": "",
+      "checkout_url_standard": "",
       "background_color": "bg-red",
       "text_color": "text-white"
     },
@@ -98,7 +104,8 @@
         "Full access to conference sessions",
         "Networking opportunities"
       ],
-      "checkout_url": "http://192.168.2.112/migra24/register?pass-id=7&status=paid",
+      "checkout_url_early": "http://192.168.2.112/migra24/register?pass-id=7&status=paid",
+      "checkout_url_standard": "http://192.168.2.112/migra24/register?pass-id=7&status=paid",
       "background_color": "bg-yellow",
       "text_color": "text-black"
     }
