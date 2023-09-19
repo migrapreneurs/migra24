@@ -104,11 +104,11 @@ if ($json_data === false) {
           <div class="col-md-6 col-xs-12 first-xs">
             <picture class="col-xs-12">
               <!-- Define your <source> elements for various screen widths here -->
-              <source media="(min-width: 2000px)" srcset="https://placehold.co/2400x1800/FF3300/FFFFFF" type="image/webp">
-              <source media="(min-width: 1025px)" srcset="https://placehold.co/1200x900/FF3300/FFFFFF" type="image/webp">
-              <source media="(min-width: 767px)" srcset="https://placehold.co/800x400/FF3300/FFFFFF" type="image/webp">
-              <source media="(min-width: 300px)" srcset="https://placehold.co/400x200/FF3300/FFFFFF" type="image/webp">
-              <img src="https://placehold.co/400x400/FF3300/FFFFFF" alt="Image 1" width="1460" height="800">
+              <source media="(min-width: 2000px)" srcset="https://res.cloudinary.com/migrapreneur/image/upload/c_fill,dpr_2.0,e_sharpen:100,w_2400,h_1800/migra24/common/exhibitor-hero" type="image/webp">
+              <source media="(min-width: 1025px)" srcset="https://res.cloudinary.com/migrapreneur/image/upload/c_fill,dpr_2.0,e_sharpen:100,w_1200,h_900/migra24/common/exhibitor-hero" type="image/webp">
+              <source media="(min-width: 767px)" srcset="https://res.cloudinary.com/migrapreneur/image/upload/c_fill,dpr_2.0,e_sharpen:100,w_800,h_400/migra24/common/exhibitor-hero" type="image/webp">
+              <source media="(min-width: 300px)" srcset="https://res.cloudinary.com/migrapreneur/image/upload/c_fill,dpr_1.0,e_sharpen:100,w_400,h_200/migra24/common/exhibitor-hero" type="image/webp">
+              <img src="https://res.cloudinary.com/migrapreneur/image/upload/c_fill,dpr_1.0,e_sharpen:100,w_400,h_200/migra24/common/exhibitor-hero" alt="Motorwerk Venue" width="800" height="800">
             </picture>
           </div>
         </div>
@@ -128,12 +128,16 @@ if ($json_data === false) {
               </ul>
             </div>
             <div class="col-md-5 col-md-offset-1 rounded-box bg-yellow text-black top-xs">
-              <h3>Book your seats now before your competitor does, as there are limited stands available!</h3>
+              <h3><?= $jsonData['sections']['why']['ctabox']['title']; ?></h3>
               <ul class="circle black mar-b-20">
-                <li>The quicker you are at booking your place, the better location you get of your choice. The availability of rostrums, assignment of communication/presentation apertures and workspaces of the events are limited.</li>
-                <li>This is a chance not to be missed, if you’re not there your competitors will be!</li>
+                <?php
+
+                foreach ($jsonData['sections']['why']['ctabox']['incentive'] as $benefit) {
+                  echo '<li>' . $benefit['text'] . '</li>';
+                }
+                ?>
               </ul>
-              <a class="btn standard bg-black text-white S mar-t-20" href="#">Book a call</a>
+              <a class="btn standard bg-black text-white S mar-t-20" href="<?= $jsonData['primary-cta']['url']; ?>"><?= $jsonData['primary-cta']['text']; ?></a>
             </div>
 
           </section>
@@ -145,17 +149,16 @@ if ($json_data === false) {
               <div class="gallery">
 
                 <?php
-                var_dump($jsonData['sections']['venue']['images']);
                 foreach ($jsonData['sections']['venue']['images'] as $galleryItem) { ?>
 
                 <div class="gallery-slide">
                   <picture>
                     <!-- Define your <source> elements for various screen widths here -->
-                    <source media="(min-width: 2000px)" srcset="https://res.cloudinary.com/migrapreneur/image/upload/c_fit,dpr_2.0,e_sharpen:100,h_1200,w_2400/migra24/motorwerk/<?= $galleryItem['url']; ?>" type="image/webp">
-                    <source media="(min-width: 1025px)" srcset="https://res.cloudinary.com/migrapreneur/image/upload/c_fit,dpr_2.0,e_sharpen:100,h_600,w_1200/migra24/motorwerk/<?= $galleryItem['url']; ?>" type="image/webp">
-                    <source media="(min-width: 767px)" srcset="https://res.cloudinary.com/migrapreneur/image/upload/c_fit,dpr_2.0,e_sharpen:100,h_500,w_800/migra24/motorwerk/<?= $galleryItem['url']; ?>" type="image/webp">
-                    <source media="(min-width: 300px)" srcset="https://res.cloudinary.com/migrapreneur/image/upload/c_fit,dpr_1.0,e_sharpen:100,h_400,w_500/migra24/motorwerk/<?= $galleryItem['url']; ?>" type="image/webp">
-                    <img src="https://res.cloudinary.com/migrapreneur/image/upload/c_fit,dpr_1.0,e_sharpen:100,h_300,w_400/migra24/motorwerk/<?= $galleryItem['url']; ?>" width="1460" height="800">
+                    <source media="(min-width: 2000px)" srcset="https://res.cloudinary.com/migrapreneur/image/upload/c_fill,dpr_2.0,e_sharpen:100,h_1200,w_2400/migra24/motorwerk/<?= $galleryItem['url']; ?>" type="image/webp">
+                    <source media="(min-width: 1025px)" srcset="https://res.cloudinary.com/migrapreneur/image/upload/c_fill,dpr_2.0,e_sharpen:100,h_600,w_1200/migra24/motorwerk/<?= $galleryItem['url']; ?>" type="image/webp">
+                    <source media="(min-width: 767px)" srcset="https://res.cloudinary.com/migrapreneur/image/upload/c_fill,dpr_2.0,e_sharpen:100,h_500,w_800/migra24/motorwerk/<?= $galleryItem['url']; ?>" type="image/webp">
+                    <source media="(min-width: 300px)" srcset="https://res.cloudinary.com/migrapreneur/image/upload/c_fill,dpr_1.0,e_sharpen:100,h_400,w_500/migra24/motorwerk/<?= $galleryItem['url']; ?>" type="image/webp">
+                    <img src="https://res.cloudinary.com/migrapreneur/image/upload/c_fill,dpr_1.0,e_sharpen:100,h_300,w_400/migra24/motorwerk/<?= $galleryItem['url']; ?>" width="1460" height="800">
                   </picture>
                 </div>
               <?php } ?>
@@ -168,11 +171,11 @@ if ($json_data === false) {
               <address class="col-xs-6 mar-b-20">
                 <p class="bold M"><?= $jsonData['sections']['venue'][0]['name']; ?></p>
                 <p class="S">
-                  <?= $jsonData['sections']['venue'][0]['address']; ?><br />
-                  <?= $jsonData['sections']['venue'][0]['zipcode']; ?>, <?= $jsonData['sections']['venue'][0]['city']; ?>
+                  <?= $jsonData['sections']['venue']['address']; ?><br />
+                  <?= $jsonData['sections']['venue']['zipcode']; ?>, <?= $jsonData['sections']['venue']['city']; ?>
                 </p>
               </address>
-              <a href="<?= $jsonData['sections']['venue'][0]['mapslink']; ?>" class="btn standard bg-turquoise text-black" target="_blank">View on Google Maps</a>
+              <a href="<?= $jsonData['sections']['venue']['mapslink']; ?>" class="btn standard bg-turquoise text-black" target="_blank">View on Google Maps</a>
             </div>
           </section>
 
@@ -184,11 +187,11 @@ if ($json_data === false) {
           <section id="Booth Plans" class="mar-t-80">
             <div class="row col-xs-12 mar-b-60">
               <div class="col-md-5 col-md-offset-1">
-                <h2 class="h1">Booth Plans</h2>
-                  <p class="M">Let’s discuss your needs and requirements and let us make this happen together.</p>
+                <h2 class="h1"><?= $jsonData['sections']['boothplans']['header']['title']; ?></h2>
+                  <p class="M"><?= $jsonData['sections']['boothplans']['header']['subtitle']; ?></p>
               </div>
-              <div class="col-md-5 col-md-offset-1">
-                <a class="btn large bg-yellow text-black" href="">Book a call</a>
+              <div class="col-md-5 col-md-offset-1 mar-t-40">
+                <a class="btn large bg-yellow text-black" href="<?= $jsonData['primary-cta']['url']; ?>"><?= $jsonData['primary-cta']['text']; ?></a>
               </div>
 
             </div>
@@ -207,7 +210,7 @@ if ($json_data === false) {
               ?>
 
               <table>
-                  <thead>
+                  <thead class="bg-shade-black-2">
                       <tr>
                           <?php foreach ($tableHeaders as $header): ?>
                               <th class="bold first-column"><?= $header ?></th>

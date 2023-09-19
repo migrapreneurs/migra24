@@ -53,6 +53,7 @@ html {
   --col-signal-error: hsla(5, 100%, 66%, 1);
 
   --col-shade-black-1: hsla(221, 16%, 49%, 1);
+  --col-shade-black-2: hsla(221, 26%, 24%, 1);
 
   /* Typography variables */
   --type-xxl: calc(46px + (80 - 46) * ((100vw - 375px) / (1600 - 375)));
@@ -287,6 +288,10 @@ p a.link {
   color: var(--col-shade-black-1);
 }
 
+.text-shade-black-2 {
+  color: var(--col-shade-black-2);
+}
+
 /* Utility classes for background color */
 .bg-black {
   background-color: var(--col-pri-black);
@@ -347,6 +352,11 @@ p a.link {
 .bg-shade-black-1 {
   background-color: var(--col-shade-black-1);
 }
+
+.bg-shade-black-2 {
+  background-color: var(--col-shade-black-2);
+}
+
 
 
 img, video {

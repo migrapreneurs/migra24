@@ -501,9 +501,10 @@ th.right {
   th:first-child, td:first-child {
     position: sticky;
     left: 0;
-    background-color: var(--col-pri-lille);
+    background-color: var(--col-shade-black-2);
     z-index: 1;
     border-right: 1px solid white; /* Add this line to keep the right border visible */
+    border-left: 0;
     min-width: 100px !important; /* Adjust the width as needed */
     max-width: 100px !important; /* Ensure the max-width is also set to the same value */
   }

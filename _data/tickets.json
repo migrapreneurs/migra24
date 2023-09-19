@@ -1,0 +1,88 @@
+{
+  "tickets": [
+    {
+      "title": "Early Bird Ticket",
+      "price": 199,
+      "content": [
+        "Full access to conference sessions",
+        "Networking opportunities",
+        "Lunch and refreshments included"
+      ],
+      "checkout_url": "https://example.com/checkout/earlybird",
+      "background_color": "bg-green",
+      "text_color": "text-white"
+    },
+    {
+      "title": "Standard Ticket",
+      "price": 249,
+      "content": [
+        "Full access to conference sessions",
+        "Networking opportunities",
+        "Lunch and refreshments included"
+      ],
+      "checkout_url": "https://example.com/checkout/standard",
+      "background_color": "bg-blue",
+      "text_color": "text-white"
+    },
+    {
+      "title": "VIP Ticket",
+      "price": 349,
+      "content": [
+        "Priority access to conference sessions",
+        "Exclusive VIP lounge access",
+        "Gourmet meals and beverages"
+      ],
+      "checkout_url": "https://example.com/checkout/vip",
+      "background_color": "bg-gold",
+      "text_color": "text-black"
+    },
+    {
+      "title": "Student Ticket",
+      "price": 99,
+      "content": [
+        "Full access to conference sessions",
+        "Networking opportunities",
+        "Valid student ID required"
+      ],
+      "checkout_url": "https://example.com/checkout/student",
+      "background_color": "bg-purple",
+      "text_color": "text-white"
+    },
+    {
+      "title": "Group Ticket (5+)",
+      "price": 199,
+      "content": [
+        "Full access to conference sessions",
+        "Networking opportunities",
+        "Lunch and refreshments included"
+      ],
+      "checkout_url": "https://example.com/checkout/group",
+      "background_color": "bg-orange",
+      "text_color": "text-black"
+    },
+    {
+      "title": "Speaker Ticket",
+      "price": 0,
+      "content": [
+        "Speaker and presenter access",
+        "Full access to all sessions",
+        "VIP lounge access"
+      ],
+      "checkout_url": "https://example.com/checkout/speaker",
+      "background_color": "bg-red",
+      "text_color": "text-white"
+    },
+    {
+      "title": "Exhibitor Ticket",
+      "price": 299,
+      "content": [
+        "Exhibitor booth access",
+        "Full access to conference sessions",
+        "Networking opportunities"
+      ],
+      "checkout_url": "https://example.com/checkout/exhibitor",
+      "background_color": "bg-yellow",
+      "text_color": "text-black"
+    }
+  ]
+}
