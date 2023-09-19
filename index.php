@@ -225,16 +225,32 @@ if ($json_data === false) {
             <h2 class="h1"><?= $json_data['general']['title'];?></h2>
             <p class="M"><?= $json_data['general']['subtitle'];?></p>
             <div class="mar-t-60 ticket-container">
-              <?php foreach ($tickets as $ticket) {
+              <?php
+              // Get the current date and time in UTC
+              $currentDate = new DateTime('now', new DateTimeZone('UTC'));
+
+              foreach ($tickets as $ticket) {
                 $fullColorClass = $ticket['text_color'];
                 $colorName = substr($fullColorClass, strlen("text-"));
+
+                // Parse the earlybird end date from the JSON
+                $earlybirdEndDate = new DateTime($json_data['general']['earlybird-end_date']);
+
+                // Check if the current date is before the earlybird end date
+                if ($currentDate <= $earlybirdEndDate) {
+                  $price = $ticket['early-price'];
+                  $checkoutUrl = $ticket['checkout_url_early'];
+                } else {
+                  $price = $ticket['standard-price'];
+                  $checkoutUrl = $ticket['checkout_url_standard'];
+                }
                 ?>
                 <div class="ticket rounded-box <?= $ticket['background_color']; ?> <?= $ticket['text_color']; ?>">
                   <div class="ticket-title">
                     <h3><?= $ticket['title']; ?></h3>
                   </div>
                   <div class="price-tag mar-b-20">
-                    <span class="price"><?= $ticket['price']; ?>€</span>
+                    <span class="price"><?= $price; ?>€</span>
                     <span class="line <?= $colorName; ?>"></span>
                     <span class="denominator">ticket*</span>
                   </div>
@@ -245,10 +261,11 @@ if ($json_data === false) {
                   </ul>
                   <p class="XXS">* limited capacity, registration required.</p>
                   <div class="col-xs-12 mar-t-80">
-                    <a class="btn standard bg-black text-white XS mar-t-20" href="<?= $ticket['checkout_url']; ?>">Buy <?= $ticket['title']; ?></a>
+                    <a class="btn standard bg-black text-white XS mar-t-20" href="<?= $checkoutUrl; ?>">Buy <?= $ticket['title']; ?></a>
                   </div>
                 </div>
               <?php } ?>
+
             </div>
           </section>
 
