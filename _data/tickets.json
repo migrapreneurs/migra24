@@ -1,6 +1,7 @@
 {
   "tickets": [
     {
+      "pass-id" : 1,
       "title": "General Pass",
       "price": 11,
       "content": [
@@ -13,6 +14,7 @@
       "text_color": "text-black"
     },
     {
+      "pass-id" : 3,
       "title": "Unemployed Pass",
       "price": 0,
       "content": [
@@ -25,6 +27,7 @@
       "text_color": "text-black"
     },
     {
+      "pass-id" : 4,
       "title": "LGBTQ+ Pass",
       "price": 0,
       "content": [
@@ -37,6 +40,7 @@
       "text_color": "text-black"
     },
     {
+      "pass-id" : 5,
       "title": "Investor Pass",
       "price": 179,
       "content": [
@@ -49,6 +53,7 @@
       "text_color": "text-white"
     },
     {
+      "pass-id" : 6,
       "title": "Corporate Pass",
       "price": 179,
       "content": [
@@ -61,6 +66,7 @@
       "text_color": "text-white"
     },
     {
+      "pass-id" : 7,
       "title": "Startup Pass",
       "price": 36,
       "content": [
@@ -73,6 +79,7 @@
       "text_color": "text-white"
     },
     {
+      "pass-id" : 8,
       "title": "Press and Influencers",
       "price": 0,
       "content": [

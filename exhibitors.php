@@ -181,7 +181,7 @@ if ($json_data === false) {
 
 
 
-
+          <!-- http://192.168.2.112/migra24/register?pass-id=1&status=paid -->
 
           <!-- BOOTH PLANS -->
           <section id="Booth Plans" class="mar-t-80">
