@@ -22,7 +22,7 @@
         "Networking opportunities",
         "Lunch and refreshments included"
       ],
-      "checkout_url": "https://migra24.org/register?pass-id=2&status=paid",
+      "checkout_url": "http://192.168.2.112/migra24/register?pass-id=2&status=paid",
       "background_color": "bg-beige-light",
       "text_color": "text-black"
     },
@@ -35,7 +35,7 @@
         "Exclusive VIP lounge access",
         "Gourmet meals and beverages"
       ],
-      "checkout_url": "https://migra24.org/register?pass-id=3&status=paid",
+      "checkout_url": "http://192.168.2.112/migra24/register?pass-id=3&status=paid",
       "background_color": "bg-peach",
       "text_color": "text-black"
     },
@@ -87,7 +87,7 @@
         "Full access to conference sessions",
         "Networking opportunities"
       ],
-      "checkout_url": "https://migra24.org/register?pass-id=7&status=paid",
+      "checkout_url": "http://192.168.2.112/migra24/register?pass-id=7&status=paid",
       "background_color": "bg-yellow",
       "text_color": "text-black"
     }
