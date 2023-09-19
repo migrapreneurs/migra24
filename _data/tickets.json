@@ -9,12 +9,12 @@
         "Networking opportunities",
         "Lunch and refreshments included"
       ],
-      "checkout_url": "https://buy.stripe.com/test_9AQcPpgnr6cVd44eUX",
+      "checkout_url": "https://buy.stripe.com/test_00g9Ddc7bgRz7JK9AE",
       "background_color": "bg-pea-light",
       "text_color": "text-black"
     },
     {
-      "pass-id" : 3,
+      "pass-id" : 2,
       "title": "Unemployed Pass",
       "price": 0,
       "content": [
@@ -22,12 +22,12 @@
         "Networking opportunities",
         "Lunch and refreshments included"
       ],
-      "checkout_url": "https://example.com/checkout/standard",
+      "checkout_url": "https://migra24.org/register?pass-id=2&status=paid",
       "background_color": "bg-beige-light",
       "text_color": "text-black"
     },
     {
-      "pass-id" : 4,
+      "pass-id" : 3,
       "title": "LGBTQ+ Pass",
       "price": 0,
       "content": [
@@ -35,12 +35,12 @@
         "Exclusive VIP lounge access",
         "Gourmet meals and beverages"
       ],
-      "checkout_url": "https://example.com/checkout/vip",
+      "checkout_url": "https://migra24.org/register?pass-id=3&status=paid",
       "background_color": "bg-peach",
       "text_color": "text-black"
     },
     {
-      "pass-id" : 5,
+      "pass-id" : 4,
       "title": "Investor Pass",
       "price": 179,
       "content": [
@@ -53,7 +53,7 @@
       "text_color": "text-white"
     },
     {
-      "pass-id" : 6,
+      "pass-id" : 5,
       "title": "Corporate Pass",
       "price": 179,
       "content": [
@@ -66,7 +66,7 @@
       "text_color": "text-white"
     },
     {
-      "pass-id" : 7,
+      "pass-id" : 6,
       "title": "Startup Pass",
       "price": 36,
       "content": [
@@ -79,7 +79,7 @@
       "text_color": "text-white"
     },
     {
-      "pass-id" : 8,
+      "pass-id" : 7,
       "title": "Press and Influencers",
       "price": 0,
       "content": [
@@ -87,7 +87,7 @@
         "Full access to conference sessions",
         "Networking opportunities"
       ],
-      "checkout_url": "https://example.com/checkout/exhibitor",
+      "checkout_url": "https://migra24.org/register?pass-id=7&status=paid",
       "background_color": "bg-yellow",
       "text_color": "text-black"
     }
