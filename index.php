@@ -182,6 +182,8 @@ if ($json_data === false) {
             </div>
           </section>
 
+
+
           <!-- PARTNERS -->
           <section id="Partners">
             <h2 class="h1">Our Key Partners</h2>
@@ -194,6 +196,7 @@ if ($json_data === false) {
             </ul>
             </div>
           </section>
+
 
 
           <!-- TICKETS -->
@@ -331,6 +334,8 @@ if ($json_data === false) {
               </div>
           </section>
 
+
+
           <!-- FAQ -->
           <section id="FAQ">
 
@@ -363,6 +368,8 @@ if ($json_data === false) {
           </section>
 
         </main>
+
+        <?php include('_assets/_script/footer.php'); ?>
 
 
 

@@ -20,9 +20,8 @@ header {
   position: fixed;
   top: 10px;
   right: 0;
-  z-index:9999;
+  z-index: 9999;
 }
-
 
 /* Style for the hamburger and close icons */
 .hamburger-icon, .close-icon {
@@ -30,32 +29,38 @@ header {
   width: 30px;
   height: 30px;
   fill: white;
-  margin-right:15px;
+  margin-right: 15px;
 }
 
 .hamburger-icon {
-  display:none;
+  display: none;
 }
 
 .hidden {
-  display:none !important;
+  display: none !important;
 }
-
-
 
 .mobile-menu {
   display: none; /* Initially hide the mobile menu */
 }
 
 
-/* Style for the logo */
+
 .logo {
   margin-left: 25px; /* Adjust the margin as needed */
   height: calc(100% - 50px); /* Calculate the height, considering 20px padding top and bottom */
   display: flex;
   align-items: center; /* Center the logo vertically within the header */
-  position:relative;
-  z-index:10000;
+  position: relative;
+  z-index: 10000;
+}
+
+.logo a {
+  height: 100%; /* Make the anchor fill the height of the .logo container */
+  display: flex;
+  align-items: center;
+  text-decoration: none; /* Remove underline from the anchor */
+  color: inherit; /* Inherit the text color from the parent */
 }
 
 /* Style for the logo on smaller screens */
@@ -64,7 +69,6 @@ header {
     margin-left: 20px; /* Adjust the margin as needed */
     height: calc(100% - 40px); /* Calculate the height, considering 20px padding top and bottom */
   }
-
 }
 
 /* Style for the logo on smaller screens */
@@ -75,7 +79,7 @@ header {
   }
 
   nav {
-    display:none;
+    display: none;
   }
 
   /* Show the hamburger menu icon */
@@ -104,14 +108,13 @@ header {
   }
 
   .mobile-menu li {
-    margin-top:30px;
+    margin-top: 30px;
     font-family: var(--txt-display);
     font-size: var(--type-xl);
   }
 
   .mobile-menu a {
     text-decoration: none;
-
   }
 
   /* Style for the close button (X icon) */
@@ -122,7 +125,6 @@ header {
     cursor: pointer;
     font-size: 24px;
   }
-
 }
 
 .logo img {
@@ -141,7 +143,7 @@ nav ul {
   list-style: none;
   display: flex;
   align-items: center;
-    justify-content: space-between;
+  justify-content: space-between;
 }
 
 nav li {
@@ -156,10 +158,7 @@ nav a {
   text-decoration: none;
   letter-spacing: 1px;
   font-size: var(--type-micro);
-
 }
-
-
 
 
 
@@ -192,17 +191,40 @@ main::-webkit-scrollbar-thumb {
 }
 
 section {
-  padding-top: calc(60px + (160 - 60) * ((100vw - 375px) / (1600 - 375)));
-  padding-bottom: calc(60px + (80 - 60) * ((100vw - 375px) / (1600 - 375)));
+  padding-top: calc(80px + (160 - 80) * ((100vw - 375px) / (1600 - 375)));
+  padding-bottom: 0;
   margin-left: calc(0px + (120 - 0) * ((100vw - 375px) / (1600 - 375)));
   margin-right: calc(0px + (120 - 0) * ((100vw - 375px) / (1600 - 375)));
+}
+
+section:last-child {
+  padding-bottom: calc(80px + (160 - 80) * ((100vw - 375px) / (1600 - 375)));
 }
 
 
 
 
 footer {
-  padding: 20px 0;
+  padding: calc(20px + (80 - 20) * ((100vw - 375px) / (1600 - 375)));
+}
+
+@media (max-width: 767px) {
+  footer .footer-logo {
+    margin-bottom:60px;
+  }
+
+  footer ul {
+    margin-bottom:60px;
+  }
+}
+
+footer ul li h4 {
+  margin-bottom:20px;
+}
+
+footer li {
+  font-size: var(--type-tiny);
+  margin-bottom:10px;
 }
 
 
@@ -332,6 +354,19 @@ footer {
     .hero-cta-container {
         flex-direction: column; /* Vertical alignment for mobile */
     }
+}
+
+.hero-secondary .text {
+  padding:calc(20px + (60 - 20) * ((100vw - 375px) / (1600 - 375)));
+}
+
+
+
+/* Media query for mobile devices (adjust the breakpoint as needed) */
+@media (max-width: 768px) {
+  .hero-secondary .text {
+    padding:40px 40px !important;
+  }
 }
 
 
@@ -593,4 +628,85 @@ th.right {
   display: block; /* Remove image default spacing */
   width: auto; /* Ensure the image fits within its container */
   max-height: 40px; /* Maintain the image's aspect ratio */
+}
+
+/* Style the FAQ items */
+.faq-item {
+  margin-bottom: 20px;
+}
+
+/* Hide the checkbox inputs */
+.faq-toggle {
+  display: none;
+}
+
+/* Style the question labels */
+.faq-question {
+  background-color: var(--col-pri-black);
+  border: 1px solid var(--col-pri-white);
+  border-top:0;
+  border-left:0;
+  border-right:0;
+  color: var(--col-pri-white);
+  padding: 20px;
+  text-align: left;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s ease-in-out;
+  font-size: var(--type-xxxs);
+  font-family: var(--txt-bold);
+  user-select: none; /* Make the text non-selectable */
+}
+
+/* Style the plus/minus icons */
+.faq-question::before {
+  content: ''; /* Remove the text content */
+    position: absolute;
+    top: 50%; /* Vertically center the icon */
+    right: 20px;
+    transform: translateY(-50%); /* Vertically centering transform */
+    width: 16px; /* Adjust the width and height based on your SVG size */
+    height: 16px;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+  /* Set the background image for the plus sign */
+  background-image: url('../_images/faq-plus.svg'); /* Replace with your SVG path */
+
+  transition: content 0.3s ease-in-out;
+}
+
+/* Add styles for the expanded state */
+.faq-toggle:checked + .faq-question {
+  background-color: var(--col-pri-black);
+  border: 1px solid var(--col-pri-white);
+  border-top:0;
+  border-left:0;
+  border-right:0;
+  color: var(--col-pri-white);
+}
+
+/* Add styles for the expanded state */
+.faq-toggle:checked + .faq-question::before {
+  /* Set the background image for the minus sign */
+  background-image: url('../_images/faq-minus.svg'); /* Replace with your SVG path */
+}
+
+/* Style the answer (initially hidden) */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  opacity: 0;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
+  font-size: var(--type-tiny);
+  line-height: 1.4em;
+  font-family: var(--txt-standard);
+}
+
+/* Toggle the answer visibility when the label is clicked */
+.faq-toggle:checked + .faq-question + .faq-answer {
+  max-height: 1000px;
+  opacity: 1;
+  padding: 20px;
 }
