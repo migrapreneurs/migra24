@@ -2,13 +2,14 @@
   "general": {
     "earlybird-end_date": "2023-10-13T00:00:00.000Z",
     "title": "Get your Early Bird Tickets Now",
-    "subtitle" : "Take advantage of 19% discount until October 18, 2023."
+    "subtitle" : "Take advantage of up to 60% discount until October 18, 2023."
   },
   "tickets": [
     {
       "pass-id" : 1,
       "title": "General Pass",
-      "price": 11,
+      "early-price": 11,
+      "standard-price": 24,
       "content": [
         "Full access to conference sessions",
         "Networking opportunities",
@@ -21,20 +22,22 @@
     {
       "pass-id" : 2,
       "title": "Unemployed Pass",
-      "price": 0,
+      "early-price": 0,
+      "standard-price": 0,
       "content": [
         "Full access to conference sessions",
         "Networking opportunities",
         "Lunch and refreshments included"
       ],
       "checkout_url": "http://192.168.2.112/migra24/register?pass-id=2&status=paid",
-      "background_color": "bg-beige-light",
+      "background_color": "bg-pea-light",
       "text_color": "text-black"
     },
     {
       "pass-id" : 3,
       "title": "LGBTQ+ Pass",
-      "price": 0,
+      "early-price": 0,
+      "standard-price": 0,
       "content": [
         "Priority access to conference sessions",
         "Exclusive VIP lounge access",
@@ -47,7 +50,8 @@
     {
       "pass-id" : 4,
       "title": "Investor Pass",
-      "price": 179,
+      "early-price": 179,
+      "standard-price": 357,
       "content": [
         "Full access to conference sessions",
         "Networking opportunities",
@@ -60,7 +64,8 @@
     {
       "pass-id" : 5,
       "title": "Corporate Pass",
-      "price": 179,
+      "early-price": 179,
+      "standard-price": 357,
       "content": [
         "Full access to conference sessions",
         "Networking opportunities",
@@ -73,7 +78,8 @@
     {
       "pass-id" : 6,
       "title": "Startup Pass",
-      "price": 36,
+      "early-price": 36,
+      "standard-price": 89,
       "content": [
         "Speaker and presenter access",
         "Full access to all sessions",

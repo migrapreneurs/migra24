@@ -222,7 +222,7 @@ if ($json_data === false) {
           ?>
 
           <section id="Tickets">
-            <h2 class="h1">Get your tickets now</h2>
+            <h2 class="h1"><?= $json_data['tickets']['general']['title'];?></h2>
             <div class="mar-t-60 ticket-container">
               <?php foreach ($tickets as $ticket) {
                 $fullColorClass = $ticket['text_color'];
