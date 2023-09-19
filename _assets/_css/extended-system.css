@@ -561,27 +561,57 @@ th.right {
   grid-gap: 20px; /* Horizontal gap */
   row-gap: 20px; /* Vertical gap */
   align-items: stretch; /* Make all items the same height */
+  justify-content: space-between;
+  position: relative; /* Add this for positioning the buttons */
 }
 
-/* Media query for screens with a maximum width of 768px (typical for mobile screens) */
+.ticket {
+  padding: calc(20px + (30 - 20) * ((100vw - 375px) / (1600 - 375)));
+  flex-grow: 1;
+  display: block; /* Use flex layout */
+  flex-direction: column; /* Stack children vertically */
+  position: relative;
+}
+
+/* Media query for screens with a maximum width of 1280px */
 @media (max-width: 1280px) {
   .ticket-container {
-    grid-template-columns: repeat(2, 1fr); /* Four columns */
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
   }
 }
 
-
-/* Media query for screens with a maximum width of 768px (typical for mobile screens) */
+/* Media query for screens with a maximum width of 768px */
 @media (max-width: 768px) {
   .ticket-container {
     grid-template-columns: 1fr; /* Single column for mobile */
   }
+  .ticket {
+    display: flex /* Use flex layout */
+  }
+}
+
+/* Style for the buttons */
+.ticket .btn {
+  text-align: center;
+  padding: 10px 15px; /* Adjust the padding as needed */
+  background-color: var(--col-pri-black); /* Set the button background color */
+  color: var(--col-pri-white); /* Set the button text color */
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  position: absolute;
+  bottom: calc(20px + (30 - 20) * ((100vw - 375px) / (1600 - 375))); /* Position at the bottom */
+}
+
+/* Add a hover effect for the buttons */
+.ticket .btn:hover {
+  background-color: var(--col-pri-white);
+  color: var(--col-pri-black);
 }
 
 .price-tag {
   display: flex;
   align-items: center; /* Vertically center items */
-  letter-spacing:1px;
+  letter-spacing: 1px;
 }
 
 .price {
@@ -590,13 +620,25 @@ th.right {
 }
 
 .line {
-  border-top: 2px solid var(--col-pri-black); /* Horizontal line */
-  flex-grow: 1; /* Expand to fill available space */
-  margin: 0 10px; /* Add spacing on both sides */
+  flex-grow: 1;
+  margin: 0 10px;
+}
+
+.line.black {
+  border-top: 2px solid var(--col-pri-black);
+}
+
+.line.white {
+  border-top: 2px solid var(--col-pri-white);
 }
 
 .denominator {
   font-size: var(--type-micro);
+}
+
+.ticket-title {
+  display: block;
+  height:80px;
 }
 
 /* PARTNERS */

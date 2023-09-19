@@ -218,26 +218,34 @@ if ($json_data === false) {
           }
 
           $tickets = $json_data['tickets'];
+
           ?>
 
           <section id="Tickets">
             <h2 class="h1">Get your tickets now</h2>
             <div class="mar-t-60 ticket-container">
-              <?php foreach ($tickets as $ticket) { ?>
-                <div class="ticket rounded-box <?php echo $ticket['background_color']; ?> <?php echo $ticket['text_color']; ?>">
-                  <h3><?php echo $ticket['title']; ?></h3>
+              <?php foreach ($tickets as $ticket) {
+                $fullColorClass = $ticket['text_color'];
+                $colorName = substr($fullColorClass, strlen("text-"));
+                ?>
+                <div class="ticket rounded-box <?= $ticket['background_color']; ?> <?= $ticket['text_color']; ?>">
+                  <div class="ticket-title">
+                    <h3><?= $ticket['title']; ?></h3>
+                  </div>
                   <div class="price-tag mar-b-20">
-                    <span class="price"><?php echo $ticket['price']; ?>€</span>
-                    <span class="line"></span>
+                    <span class="price"><?= $ticket['price']; ?>€</span>
+                    <span class="line <?= $colorName; ?>"></span>
                     <span class="denominator">ticket*</span>
                   </div>
-                  <ul class="circle black mar-b-20">
+                  <ul class="circle <?= $colorName; ?> mar-b-20">
                     <?php foreach ($ticket['content'] as $bullet) { ?>
-                      <li><?php echo $bullet; ?></li>
+                      <li><?= $bullet; ?></li>
                     <?php } ?>
                   </ul>
                   <p class="XXS">* limited capacity, registration required.</p>
-                  <a class="btn standard bg-black text-white S mar-t-20" href="<?php echo $ticket['checkout_url']; ?>">Buy <?php echo $ticket['title']; ?></a>
+                  <div class="col-xs-12 mar-t-80">
+                    <a class="btn standard bg-black text-white XS mar-t-20" href="<?= $ticket['checkout_url']; ?>">Buy <?= $ticket['title']; ?></a>
+                  </div>
                 </div>
               <?php } ?>
             </div>
