@@ -148,7 +148,7 @@ if ($json_data === false) {
 
         <main>
           <!-- WHY ATTEND -->
-          <section id="Why" class="row mar-t-120 col-xs-12">
+          <section id="Why" class="row col-xs-12">
             <h2 class="h1"><?php echo $jsonData['sections']['why']['title']; ?></h2>
             <p class="L col-lg-8"><?php echo $jsonData['sections']['why']['subtitle']; ?></p>
             <ul class="highlight-box col-xs-12 mar-t-60">
@@ -184,22 +184,151 @@ if ($json_data === false) {
 
           <!-- PARTNERS -->
           <section id="Partners">
-            <h2 class="h1">Our Speakers</h2>
-            <div class="mar-t-60 card-list-container">
-              <div class="card-list">
-                <?php
-            foreach ($jsonData['sections']['speakers'] as $speaker) {
-                if (!empty($speaker['fullname']) && !empty($speaker['jobtitle']) && !empty($speaker['url'])) { ?>
-                <div class="card">
-                  <img src="https://res.cloudinary.com/migrapreneur/image/upload/dpr_2.0,e_sharpen:139,q_auto:best/v1695030494/migra24/speakers/<?= $speaker['url']; ?>" alt="<?= $speaker['fullname']; ?>">
-                  <div class="card-text">
-                    <h3 class="L"><?= $speaker['fullname']; ?></h3>
-                    <p><?= $speaker['jobtitle']; ?></p>
-                  </div>
-                </div>
-              <?php }} ?>
-              </div>
+            <h2 class="h1">Our Key Partners</h2>
+            <ul class="partner-list mar-t-60">
+              <?php
+              for ($i = 1; $i <= 9; $i++) {
+                echo '<li class="partner-item"><img src="_assets/_images/_partners/partner_' . $i . '.png" alt="Partner ' . $i . '"></li>';
+              }
+              ?>
+            </ul>
             </div>
+          </section>
+
+
+          <!-- TICKETS -->
+          <section id="Tickets">
+            <h2 class="h1">Get your tickets now</h2>
+            <div class="mar-t-60 ticket-container">
+                <div class="ticket rounded-box bg-yellow text-black">
+                  <h3>Startup Pass</h3>
+                  <div class="price-tag mar-b-20">
+                    <span class="price">395€</span>
+                    <span class="line"></span>
+                    <span class="denominator">ticket*</span>
+                  </div>
+                  <ul class="circle black mar-b-20">
+                    <li>2-day ticket Migra24.</li>
+                    <li>Migra Week Side Events</li>
+                    <li>Migra Matchmaking Tool & pre-bookable tables in the meeting area</li>
+                    <li>Founders Day (Feb 7th)</li>
+                  </ul>
+                  <p class="XXS">* limited capacity, registration required.</p>
+                  <a class="btn standard bg-black text-white S mar-t-20" href="#">Buy Startup Pass</a>
+                </div>
+                <div class="ticket rounded-box bg-yellow text-black">
+                  <h3>Startup Pass</h3>
+                  <div class="price-tag mar-b-20">
+                    <span class="price">395€</span>
+                    <span class="line"></span>
+                    <span class="denominator">ticket*</span>
+                  </div>
+                  <ul class="circle black mar-b-20">
+                    <li>2-day ticket Migra24.</li>
+                    <li>Migra Week Side Events</li>
+                    <li>Migra Matchmaking Tool & pre-bookable tables in the meeting area</li>
+                    <li>Founders Day (Feb 7th)</li>
+                  </ul>
+                  <p class="XXS">* limited capacity, registration required.</p>
+                  <a class="btn standard bg-black text-white S mar-t-20" href="#">Buy Startup Pass</a>
+                </div>
+                <div class="ticket rounded-box bg-yellow text-black">
+                  <h3>Startup Pass</h3>
+                  <div class="price-tag mar-b-20">
+                    <span class="price">395€</span>
+                    <span class="line"></span>
+                    <span class="denominator">ticket*</span>
+                  </div>
+                  <ul class="circle black mar-b-20">
+                    <li>2-day ticket Migra24.</li>
+                    <li>Migra Week Side Events</li>
+                    <li>Migra Matchmaking Tool & pre-bookable tables in the meeting area</li>
+                    <li>Founders Day (Feb 7th)</li>
+                  </ul>
+                  <p class="XXS">* limited capacity, registration required.</p>
+                  <a class="btn standard bg-black text-white S mar-t-20" href="#">Buy Startup Pass</a>
+                </div>
+                <div class="ticket rounded-box bg-yellow text-black">
+                  <h3>Startup Pass</h3>
+                  <div class="price-tag mar-b-20">
+                    <span class="price">395€</span>
+                    <span class="line"></span>
+                    <span class="denominator">ticket*</span>
+                  </div>
+                  <ul class="circle black mar-b-20">
+                    <li>2-day ticket Migra24.</li>
+                    <li>Migra Week Side Events</li>
+                    <li>Migra Matchmaking Tool & pre-bookable tables in the meeting area</li>
+                    <li>Founders Day (Feb 7th)</li>
+                  </ul>
+                  <p class="XXS">* limited capacity, registration required.</p>
+                  <a class="btn standard bg-black text-white S mar-t-20" href="#">Buy Startup Pass</a>
+                </div>
+                <div class="ticket rounded-box bg-yellow text-black">
+                  <h3>Startup Pass</h3>
+                  <div class="price-tag mar-b-20">
+                    <span class="price">395€</span>
+                    <span class="line"></span>
+                    <span class="denominator">ticket*</span>
+                  </div>
+                  <ul class="circle black mar-b-20">
+                    <li>2-day ticket Migra24.</li>
+                    <li>Migra Week Side Events</li>
+                    <li>Migra Matchmaking Tool & pre-bookable tables in the meeting area</li>
+                    <li>Founders Day (Feb 7th)</li>
+                  </ul>
+                  <p class="XXS">* limited capacity, registration required.</p>
+                  <a class="btn standard bg-black text-white S mar-t-20" href="#">Buy Startup Pass</a>
+                </div>
+                <div class="ticket rounded-box bg-yellow text-black">
+                  <h3>Startup Pass</h3>
+                  <div class="price-tag mar-b-20">
+                    <span class="price">395€</span>
+                    <span class="line"></span>
+                    <span class="denominator">ticket*</span>
+                  </div>
+                  <ul class="circle black mar-b-20">
+                    <li>2-day ticket Migra24.</li>
+                    <li>Migra Week Side Events</li>
+                    <li>Migra Matchmaking Tool & pre-bookable tables in the meeting area</li>
+                    <li>Founders Day (Feb 7th)</li>
+                  </ul>
+                  <p class="XXS">* limited capacity, registration required.</p>
+                  <a class="btn standard bg-black text-white S mar-t-20" href="#">Buy Startup Pass</a>
+                </div>
+                <div class="ticket rounded-box bg-yellow text-black">
+                  <h3>Startup Pass</h3>
+                  <div class="price-tag mar-b-20">
+                    <span class="price">395€</span>
+                    <span class="line"></span>
+                    <span class="denominator">ticket*</span>
+                  </div>
+                  <ul class="circle black mar-b-20">
+                    <li>2-day ticket Migra24.</li>
+                    <li>Migra Week Side Events</li>
+                    <li>Migra Matchmaking Tool & pre-bookable tables in the meeting area</li>
+                    <li>Founders Day (Feb 7th)</li>
+                  </ul>
+                  <p class="XXS">* limited capacity, registration required.</p>
+                  <a class="btn standard bg-black text-white S mar-t-20" href="#">Buy Startup Pass</a>
+                </div>
+                <div class="ticket rounded-box bg-yellow text-black">
+                  <h3>Startup Pass</h3>
+                  <div class="price-tag mar-b-20">
+                    <span class="price">395€</span>
+                    <span class="line"></span>
+                    <span class="denominator">ticket*</span>
+                  </div>
+                  <ul class="circle black mar-b-20">
+                    <li>2-day ticket Migra24.</li>
+                    <li>Migra Week Side Events</li>
+                    <li>Migra Matchmaking Tool & pre-bookable tables in the meeting area</li>
+                    <li>Founders Day (Feb 7th)</li>
+                  </ul>
+                  <p class="XXS">* limited capacity, registration required.</p>
+                  <a class="btn standard bg-black text-white S mar-t-20" href="#">Buy Startup Pass</a>
+                </div>
+              </div>
           </section>
 
           <!-- FAQ -->
@@ -208,9 +337,11 @@ if ($json_data === false) {
             <div class="faq-container col-md-8 col-md-offset-2">
               <h2 class="h1 mar-b-60">Frequently Asked Questions</h2>
               <?php
+
               foreach ($jsonData['sections']['faq'] as $faqItem) {
                 //if (!empty($faqItem['question']) && !empty($faqItem['answer'])) {
-                  $count = +1;
+
+                  $count = $count+1;
                   $faqNum = "faq".$count;
 
                   ?>
@@ -221,7 +352,12 @@ if ($json_data === false) {
                   <?= $faqItem['answer']; ?>
                 </div>
               </div>
-            <?php } ?>
+            <?php
+
+
+              }
+
+             ?>
 
             </div>
           </section>

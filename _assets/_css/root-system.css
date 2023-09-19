@@ -167,6 +167,10 @@ p a.link {
   font-size: var(--type-micro);
 }
 
+.XXS {
+  font-size: var(--type-nano);
+}
+
 
 
 
@@ -515,11 +519,11 @@ ul.standard li::before {
 ul.circle li {
   display: block; /* Ensure each li is a block-level element */
   padding-left: 20px; /* Add padding for text to create the gap */
-  line-height: 1.4em; /* Adjust line height as needed */
+  line-height: 1.2em; /* Adjust line height as needed */
   position: relative; /* Set position to relative */
-  margin-bottom: 20px; /* Adjust margin between list items */
+  margin-bottom: 10px; /* Adjust margin between list items */
   font-size: var(--type-micro);
-  letter-spacing: 1px
+  letter-spacing: 1px;
 }
 
 /* Create the small rectangle background for each li */
@@ -531,8 +535,6 @@ ul.circle li::before {
   width: 5px;
   height: 5px;
   border-radius:10px;
-  background-color: var(--col-pri-white);
-  z-index: -1; /* Place the background behind the text */
 }
 
 ul.circle.white li {
@@ -561,11 +563,6 @@ ul.circle.black li::before {
 
 
 
-/* Style the FAQ container */
-.faq-container {
-
-}
-
 /* Style the FAQ items */
 .faq-item {
   margin-bottom: 20px;
@@ -585,13 +582,13 @@ ul.circle.black li::before {
   border-right:0;
   color: var(--col-pri-white);
   padding: 20px;
-
   text-align: left;
   cursor: pointer;
   position: relative;
   transition: background-color 0.3s ease-in-out;
   font-size: var(--type-xxxs);
   font-family: var(--txt-bold);
+  user-select: none; /* Make the text non-selectable */
 }
 
 /* Style the plus/minus icons */

@@ -173,8 +173,6 @@ nav a {
 main {
   margin-left: 20px;
   margin-right: 20px;
-  margin-top: calc(50px + (73 - 50) * ((100vw - 375px) / (1600 - 375)));
-  margin-bottom: calc(50px + (70 - 50) * ((100vw - 375px) / (1600 - 375)));
 
 }
 
@@ -199,6 +197,7 @@ section {
   margin-left: calc(0px + (120 - 0) * ((100vw - 375px) / (1600 - 375)));
   margin-right: calc(0px + (120 - 0) * ((100vw - 375px) / (1600 - 375)));
 }
+
 
 
 
@@ -513,4 +512,85 @@ th.right {
         display: flex;
         justify-content: space-between; /* Align horizontally on desktop */
     }
+}
+
+
+
+/* TICKETS */
+
+.ticket-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Four columns */
+  grid-gap: 20px; /* Horizontal gap */
+  row-gap: 20px; /* Vertical gap */
+  align-items: stretch; /* Make all items the same height */
+}
+
+/* Media query for screens with a maximum width of 768px (typical for mobile screens) */
+@media (max-width: 1280px) {
+  .ticket-container {
+    grid-template-columns: repeat(2, 1fr); /* Four columns */
+  }
+}
+
+
+/* Media query for screens with a maximum width of 768px (typical for mobile screens) */
+@media (max-width: 768px) {
+  .ticket-container {
+    grid-template-columns: 1fr; /* Single column for mobile */
+  }
+}
+
+.price-tag {
+  display: flex;
+  align-items: center; /* Vertically center items */
+  letter-spacing:1px;
+}
+
+.price {
+  font-family: var(--txt-bold);
+  font-size: var(--type-tiny);
+}
+
+.line {
+  border-top: 2px solid var(--col-pri-black); /* Horizontal line */
+  flex-grow: 1; /* Expand to fill available space */
+  margin: 0 10px; /* Add spacing on both sides */
+}
+
+.denominator {
+  font-size: var(--type-micro);
+}
+
+/* PARTNERS */
+.partner-logos {
+  max-width: 100%; /* Ensure the section fits within its container */
+  margin: 0 auto; /* Center the section horizontally */
+}
+
+.partner-list {
+  list-style: none; /* Remove default list bullets */
+  display: flex; /* Display logos in a horizontal row */
+  flex-wrap: wrap; /* Wrap logos to the next line when there's not enough space */
+  justify-content: space-between; /* Distribute logos horizontally with equal spacing */
+}
+
+.partner-item {
+  flex: 0 0 auto; /* Let each item have a width based on its content */
+  margin-bottom: 30px; /* Add space below each partner item */
+  max-width: none; /* Remove the max-width constraint */
+  padding:calc(10px + (20 - 10) * ((100vw - 375px) / (1600 - 375)));
+}
+
+.partner-item:last-child {
+  margin-right: 0; /* Remove margin-right for the last item in each row */
+}
+
+
+
+
+.partner-item img {
+  display: block; /* Remove image default spacing */
+  width: auto; /* Ensure the image fits within its container */
+  max-height: 40px; /* Maintain the image's aspect ratio */
 }
