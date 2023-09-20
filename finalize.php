@@ -89,6 +89,10 @@ try {
 
       // Save to MailerLite
       //$MailerLiteSubscriber = $mailerLite->subscribers->create($mailerLiteData);
+      //$groupId = '123';
+      //$subscriberId = '456';
+
+      //$response = $mailerLite->groups->assignSubscriber($groupId, $subscriberId);
 
 
 
@@ -97,8 +101,6 @@ try {
       // The ID of the new entry
       echo "AIRTABLE";
       echo "--------------";
-      echo "<br />";
-      print("<pre>".print_r($AirtableCustomer,true)."</pre>");
       echo "<br />";
       echo "--------------";
       print("<pre>".print_r($mailerLiteData,true)."</pre>");

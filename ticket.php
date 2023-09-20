@@ -7,6 +7,30 @@ require __DIR__.'/_src/at_init.php';
 $desiredRecord = null;
 $ticketID_Temp = $_GET['id'];
 
+
+// GET EVENT CREDENTIALS
+$json_url = 'https://raw.githubusercontent.com/migrapreneurs/migra24/main/_data/migra-home.json';
+
+// Fetch the JSON data
+$event_data = @file_get_contents($json_url);
+
+if ($event_data === false) {
+    // Handle error, e.g., echo an error message
+    echo "Error fetching JSON data.";
+} else {
+    // Decode the JSON data into an associative array
+    $eventData = json_decode($event_data, true);
+
+    if ($eventData === null) {
+        // Handle JSON decoding error, e.g., echo a decoding error message
+        echo "Error decoding JSON data.";
+    }
+}
+
+var_dump($eventData);
+
+
+
 do {
     $request = $airtable->getContent( 'Migra24 – Visitors' );
     $response = $request->getResponse();
