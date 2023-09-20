@@ -27,7 +27,8 @@ if ($event_data === false) {
     }
 }
 
-var_dump($eventData);
+$eventLocation = $eventData['sections']['header']['eventdata']['location'];
+$eventDate = $eventData['sections']['header']['eventdata']['date'];
 
 
 
@@ -123,9 +124,9 @@ if ($desiredRecord !== null) {
 
             <div id="EventData" class="col-xs-12 XS mar-t-40">
               <p><b>Event Location</b> <br />
-              Motorwerk, An der Industriebahn 12, 13088 Berlin</p>
+              <?= $eventLocation; ?></p>
               <p class="mar-t-20"><b>Event Date</b><br />
-              Thursday, February 8, 2024 from 9:00 AM to 9:00 PM (Germany (Berlin) Time)</p>
+              <?= $eventDate; ?></p>
             </div>
 
             <div id="Order Information" class="col-xs-12 mar-t-60 XXS">
