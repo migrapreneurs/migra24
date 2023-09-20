@@ -1,0 +1,276 @@
+main {
+  margin:120px;
+}
+
+/* Saol Display SemiBold Font */
+@font-face {
+  font-family: 'Saol Display SemiBold';
+  src: url('../_typefaces/Saol-Display-SemiBold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Suisse Intl Light Font */
+@font-face {
+  font-family: 'Suisse Intl Light';
+  src: url('../_typefaces/SuisseIntl-Light-WebS.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Suisse Intl Light Font */
+@font-face {
+  font-family: 'Suisse Intl SemiBold';
+  src: url('../_typefaces/SuisseIntl-SemiBold-WebS.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+:root {
+
+  /* Standard Typography */
+  --txt-standard: 'Suisse Intl Light', sans-serif;
+  --txt-bold: 'Suisse Intl SemiBold', sans-serif;
+  --txt-display: 'Saol Display SemiBold', serif;
+
+  /* Color variables */
+  --col-pri-black: black;
+  --col-pri-white: white;
+
+
+  /* Typography variables */
+  --type-xxl: calc(46px + (80 - 46) * ((100vw - 375px) / (1600 - 375)));
+  --type-xl: calc(36px + (50 - 36) * ((100vw - 375px) / (1600 - 375)));
+  --type-l: calc(33px + (45 - 33) * ((100vw - 375px) / (1600 - 375)));
+  --type-m: calc(30px + (40 - 30) * ((100vw - 375px) / (1600 - 375)));
+  --type-s: calc(27px + (35 - 27) * ((100vw - 375px) / (1600 - 375)));
+  --type-xs: calc(24px + (30 - 24) * ((100vw - 375px) / (1600 - 375)));
+  --type-xxs: calc(21px + (25 - 21) * ((100vw - 375px) / (1600 - 375)));
+  --type-xxxs: calc(20px + (20 - 20) * ((100vw - 375px) / (1600 - 375)));
+  --type-tiny: 18px;
+  --type-micro: 15px;
+  --type-nano: 12px;
+
+}
+
+
+body {
+  font-family: var(--txt-standard);
+  background-color: var(--col-pri-white);
+  color: var(--col-pri-black);
+  margin: 0!important;
+  font-size: var(--type-micro);
+  padding:0 !important;
+  font-kerning: normal;
+  counter-reset: item;
+  -webkit-overflow-scrolling: touch;
+}
+
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 0.875em;
+  margin-bottom: 0.4em;
+  margin-top:0;
+  padding-top:0;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--txt-display);
+}
+
+h5, h6, p b, b, strong, .bold {
+    font-family: var(--txt-bold);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Definitions */
+p {
+  line-height: 1.43em;
+  margin-top:0;
+  padding-top:0;
+  letter-spacing: 1px;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+p a.link {
+  text-decoration: underline;
+}
+
+
+
+
+.h1XL {
+  font-size: var(--type-xxl);
+}
+
+.h1, h1 {
+  font-size: var(--type-xl);
+}
+
+.h2, h2 {
+  font-size: var(--type-l);
+}
+
+.h3, h3 {
+  font-size: var(--type-m);
+}
+
+.h4, h4 {
+  font-size: var(--type-s);
+}
+
+.h5, h5 {
+  font-size: var(--type-xs);
+}
+
+.h6, h6 {
+  font-size: var(--type-xxs);
+}
+
+.L {
+  font-size: var(--type-xxs);
+}
+
+.M {
+  font-size: var(--type-xxxs);
+}
+
+.S {
+  font-size: var(--type-tiny);
+}
+
+.XS {
+  font-size: var(--type-micro);
+}
+
+.XXS {
+  font-size: var(--type-nano);
+}
+
+
+
+
+
+/* SPACINGS */
+
+
+.mar-b-120 {
+  margin-bottom: calc(60px + (120 - 60) * ((100vw - 375px) / (1600 - 375))) !important;
+}
+
+.mar-t-120 {
+  margin-top: calc(60px + (120 - 60) * ((100vw - 375px) / (1600 - 375))) !important;
+}
+
+.mar-b-100 {
+  margin-bottom: calc(50px + (100 - 50) * ((100vw - 375px) / (1600 - 375))) !important;
+}
+
+.mar-t-100 {
+  margin-top: calc(50px + (100 - 50) * ((100vw - 375px) / (1600 - 375))) !important;
+}
+
+.mar-b-80 {
+  margin-bottom: calc(40px + (80 - 40) * ((100vw - 375px) / (1600 - 375))) !important;
+}
+
+.mar-t-80 {
+  margin-top: calc(40px + (80 - 40) * ((100vw - 375px) / (1600 - 375))) !important;
+}
+
+.mar-b-60 {
+  margin-bottom: calc(30px + (60 - 30) * ((100vw - 375px) / (1600 - 375))) !important;
+}
+
+.mar-t-60 {
+  margin-top: calc(30px + (60 - 30) * ((100vw - 375px) / (1600 - 375))) !important;
+}
+
+.mar-b-40 {
+  margin-bottom: calc(20px + (40 - 20) * ((100vw - 375px) / (1600 - 375))) !important;
+}
+
+.mar-t-40 {
+  margin-top: calc(20px + (40 - 20) * ((100vw - 375px) / (1600 - 375))) !important;
+}
+
+.mar-b-20 {
+  margin-bottom: calc(10px + (20 - 10) * ((100vw - 375px) / (1600 - 375))) !important;
+}
+
+.mar-t-20 {
+  margin-top: calc(10px + (20 - 10) * ((100vw - 375px) / (1600 - 375))) !important;
+}
+
+
+.ticketID {
+  padding:10px 15px;
+  border:5px solid black;
+}
+
+#Print {
+  position:fixed;
+  top:20px;
+  right:20px;
+}
+
+#printButton {
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border:1px solid black;
+  padding: 10px 15px;
+  border-radius: 100px;
+}
+
+#printButton::before {
+  content: "";
+  background-image: url('../_images/print-icon.svg');
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: center left;
+  width: 20px;
+  height: 20px;
+  margin-right: 15px;
+}
+
+
+/* Define styles for printing */
+@media print {
+
+  main {
+    margin: 0.7in 3.6in 0.7in 0.7in;
+  }
+
+  #printButton {
+    display:none;
+  }
+  /* CSS rules for printing go here */
+  @page {
+    margin: 0 !important;
+  }
+
+  @page :header {
+    display: none;
+  }
+
+  @page :footer {
+    display: none;
+  }
+
+
+  /* Add any other print-specific styles as needed */
+}

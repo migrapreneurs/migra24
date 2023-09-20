@@ -1,6 +1,14 @@
 {
     "require": {
         "stripe/stripe-php": "^10.20",
-        "sleiman/airtable-php": "^3.0"
+        "sleiman/airtable-php": "^3.0",
+        "mailerlite/mailerlite-php": "^1.0",
+        "symfony/http-client": "^6.3",
+        "nyholm/psr7": "^1.8"
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
     }
 }

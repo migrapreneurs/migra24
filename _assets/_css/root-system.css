@@ -86,7 +86,7 @@ body {
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
-  line-height: 0.875em;
+  line-height: 1em;
   margin-bottom: 0.4em;
   margin-top:0;
   padding-top:0;
@@ -436,6 +436,11 @@ input {
 
   /* Add styles for when the input is in focus */
   transition: border-color 0.2s ease-in-out;
+}
+
+input[type="submit"] {
+    width: auto;
+    display: inline-block;
 }
 
 /* Style the custom select container */
