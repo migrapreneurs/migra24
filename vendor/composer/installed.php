@@ -37,6 +37,15 @@
             'reference' => '5d1c244f0525d265e231a65db538b74eb5483768',
             'dev_requirement' => false,
         ),
+        'mailerlite/mailerlite-api-v2-php-sdk' => array(
+            'pretty_version' => '0.3.2',
+            'version' => '0.3.2.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../mailerlite/mailerlite-api-v2-php-sdk',
+            'aliases' => array(),
+            'reference' => '9fb6b8adb3b0dd9eb964ba5169b229516c73fd78',
+            'dev_requirement' => false,
+        ),
         'mailerlite/mailerlite-php' => array(
             'pretty_version' => 'v1.0.2',
             'version' => '1.0.2.0',
@@ -155,8 +164,8 @@
         'psr/http-factory-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '*',
-                1 => '1.0',
+                0 => '1.0',
+                1 => '*',
             ),
         ),
         'psr/http-message' => array(
@@ -171,8 +180,8 @@
         'psr/http-message-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '*',
-                1 => '1.0',
+                0 => '1.0',
+                1 => '*',
             ),
         ),
         'psr/log' => array(

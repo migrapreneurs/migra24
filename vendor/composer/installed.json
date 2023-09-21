@@ -132,6 +132,58 @@
             "install-path": "../davedevelopment/stiphle"
         },
         {
+            "name": "mailerlite/mailerlite-api-v2-php-sdk",
+            "version": "0.3.2",
+            "version_normalized": "0.3.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mailerlite/mailerlite-api-v2-php-sdk.git",
+                "reference": "9fb6b8adb3b0dd9eb964ba5169b229516c73fd78"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mailerlite/mailerlite-api-v2-php-sdk/zipball/9fb6b8adb3b0dd9eb964ba5169b229516c73fd78",
+                "reference": "9fb6b8adb3b0dd9eb964ba5169b229516c73fd78",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "nyholm/psr7": "^1.0",
+                "php": "^7.1 || ^8.0",
+                "php-http/client-common": "^2.0",
+                "php-http/discovery": "^1.7"
+            },
+            "require-dev": {
+                "php-http/guzzle6-adapter": "^2.0",
+                "phpunit/phpunit": "6.* | 7.* | 8.* | 9.*"
+            },
+            "time": "2021-08-11T08:24:13+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "MailerLiteApi\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "MailerLite API v2 PHP SDK",
+            "homepage": "https://github.com/mailerlite/mailerlite-api-v2-php-sdk",
+            "keywords": [
+                "email",
+                "mailerlite",
+                "marketing",
+                "sdk"
+            ],
+            "support": {
+                "issues": "https://github.com/mailerlite/mailerlite-api-v2-php-sdk/issues",
+                "source": "https://github.com/mailerlite/mailerlite-api-v2-php-sdk/tree/0.3.2"
+            },
+            "install-path": "../mailerlite/mailerlite-api-v2-php-sdk"
+        },
+        {
             "name": "mailerlite/mailerlite-php",
             "version": "v1.0.2",
             "version_normalized": "1.0.2.0",

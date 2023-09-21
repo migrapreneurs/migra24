@@ -19,6 +19,7 @@ return array(
     'Psr\\Container\\' => array($vendorDir . '/psr/container/src'),
     'Nyholm\\Psr7\\' => array($vendorDir . '/nyholm/psr7/src'),
     'MailerLite\\' => array($vendorDir . '/mailerlite/mailerlite-php/src'),
+    'MailerLiteApi\\' => array($vendorDir . '/mailerlite/mailerlite-api-v2-php-sdk/src'),
     'Http\\Promise\\' => array($vendorDir . '/php-http/promise/src'),
     'Http\\Message\\' => array($vendorDir . '/php-http/message/src'),
     'Http\\Discovery\\' => array($vendorDir . '/php-http/discovery/src'),

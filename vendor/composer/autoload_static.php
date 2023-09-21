@@ -41,6 +41,7 @@ class ComposerStaticInit21cca266a6f56cd645708792508146d1
         'M' => 
         array (
             'MailerLite\\' => 11,
+            'MailerLiteApi\\' => 14,
         ),
         'H' => 
         array (
@@ -109,6 +110,10 @@ class ComposerStaticInit21cca266a6f56cd645708792508146d1
         'MailerLite\\' => 
         array (
             0 => __DIR__ . '/..' . '/mailerlite/mailerlite-php/src',
+        ),
+        'MailerLiteApi\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mailerlite/mailerlite-api-v2-php-sdk/src',
         ),
         'Http\\Promise\\' => 
         array (

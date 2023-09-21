@@ -60,7 +60,7 @@ try {
       );
 
       // Save to Airtable
-      $AirtableCustomer = $airtable->saveContent( "Migra24 – Visitors", $AirtableData );
+      //$AirtableCustomer = $airtable->saveContent( "Migra24 – Visitors", $AirtableData );
 
 
 
@@ -71,40 +71,32 @@ try {
 
       // ADD CUSTOMER TO MAILERLITE
       $mailerLiteApiKey = getenv('MIG_ML_SK');
-      //use MailerLite\MailerLite;
+      $groupId = '112280603'; //2024 Migrapreneur Fair Customers
+      $mailerliteClient = new \MailerLiteApi\MailerLite($mailerLiteApiKey);
 
-      //$mailerLite = new MailerLite(['api_key' => $mailerLiteApiKey]);
+      $groupsApi = $mailerliteClient->groups();
+      $groups = $groupsApi->get(); // returns array of groups
 
-      $mailerLiteData = [
+
+      $subscriber = [
         'email' => $eMail,
         'name' => $firstName,
         'fields' => [
-          'surname' => $lastName,
-          'ReasonWhy' => $reasonWhy,
-          'CurrentJob' => $currentJob,
-          'PassType' => $orderedPass,
-          'TicketID' => $passID,
+          'last_name' => $lastName,
+          'city' => $City,
+          'reasonwhy' => $reasonWhy,
+          'currentjob' => $currentJob,
+          'passtype' => $orderedPass,
+          'ticket' => $passID,
+          'company' =>  $CompanyName,
+          'nationality' =>  $countryofOrigin,
         ]
       ];
 
-      // Save to MailerLite
-      //$MailerLiteSubscriber = $mailerLite->subscribers->create($mailerLiteData);
-      //$groupId = '123';
-      //$subscriberId = '456';
-
-      //$response = $mailerLite->groups->assignSubscriber($groupId, $subscriberId);
-
+      $response = $groupsApi->addSubscriber($groupId, $subscriber); // Change GROUP_ID with ID of group you want to add subscriber to
 
 
       //OUTPUT RESULTS
-
-      // The ID of the new entry
-      echo "AIRTABLE";
-      echo "--------------";
-      echo "<br />";
-      echo "--------------";
-      print("<pre>".print_r($mailerLiteData,true)."</pre>");
-
 
       // Redirect to Ticket page
       $ticketId = $passID; // Replace with the appropriate ticket ID
