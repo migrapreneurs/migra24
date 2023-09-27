@@ -478,7 +478,7 @@ th, td {
   text-align: left;
   min-width: 100px; /* Define a minimum width for cells */
   max-width: 420px; /* Define a maximum width for cells */
-  font-feature-settings: 'tnum'; /* Activate tabular numbers */
+  font-feature-settings: 'zero' on,'tnum' on;
   font-size: var(--type-micro);
   letter-spacing: 1px;
   white-space: normal; /* Make text wrap within td elements */
@@ -571,6 +571,7 @@ th.right {
   display: block; /* Use flex layout */
   flex-direction: column; /* Stack children vertically */
   position: relative;
+  font-feature-settings: 'zero' on,'tnum' on;
 }
 
 /* Media query for screens with a maximum width of 1280px */

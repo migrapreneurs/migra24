@@ -13,7 +13,7 @@ html {
 /* Suisse Intl Light Font */
 @font-face {
   font-family: 'Suisse Intl Light';
-  src: url('../_typefaces/SuisseIntl-Light-WebS.woff2') format('woff2');
+  src: url('../_typefaces/SuisseIntl-Light-WebXL.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
@@ -21,7 +21,7 @@ html {
 /* Suisse Intl Light Font */
 @font-face {
   font-family: 'Suisse Intl SemiBold';
-  src: url('../_typefaces/SuisseIntl-SemiBold-WebS.woff2') format('woff2');
+  src: url('../_typefaces/SuisseIntl-SemiBold-WebXL.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }

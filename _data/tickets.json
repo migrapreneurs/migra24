@@ -98,7 +98,8 @@
     {
       "pass-id" : 7,
       "title": "Press and Influencers",
-      "price": 0,
+      "early-price": 0,
+      "standard-price": 0,
       "content": [
         "Exhibitor booth access",
         "Full access to conference sessions",
