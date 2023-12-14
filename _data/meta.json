@@ -12,7 +12,7 @@
         },
         {
           "name": "description",
-          "content": "Craft winning outreach emails that hit home."
+          "content": "The only migrant-focused talent gathering in Berlin."
         },
         {
           "name": "twitter:card",
@@ -20,27 +20,27 @@
         },
         {
           "name": "twitter:site",
-          "content": "@maddux"
+          "content": "@migrapreneur"
         },
         {
           "name": "twitter:title",
-          "content": "Maddux AI"
+          "content": "MigraFair 2024"
         },
         {
           "name": "twitter:description",
-          "content": "Craft outreach emails that hit home."
+          "content": "The only migrant-focused talent gathering in Berlin."
         },
         {
           "name": "twitter:creator",
-          "content": "@maddux"
+          "content": "@migrapreneur"
         },
         {
           "name": "twitter:image",
-          "content": "https://res.cloudinary.com/vitobica/image/upload/v1688413082/getmaddux/sharing-image-maddux.jpg"
+          "content": ""
         },
         {
           "property": "og:title",
-          "content": "Maddux AI – 📥 Craft outreach emails that hit home."
+          "content": "MigraFair 2024 – The only migrant-focused talent gathering in Berlin."
         },
         {
           "property": "og:type",
@@ -52,15 +52,15 @@
         },
         {
           "property": "og:image",
-          "content": "https://res.cloudinary.com/vitobica/image/upload/v1688413082/getmaddux/sharing-image-maddux.jpg"
+          "content": ""
         },
         {
           "property": "og:description",
-          "content": "Craft winning outreach emails that hit home."
+          "content": "The only migrant-focused talent gathering in Berlin."
         },
         {
           "property": "og:site_name",
-          "content": "Maddux AI – 📥 Craft outreach emails that hit home."
+          "content": "MigraFair 2024 – The only migrant-focused talent gathering in Berlin."
         }
       ]
     }
