@@ -60,7 +60,7 @@ try {
       );
 
       // Save to Airtable
-      //$AirtableCustomer = $airtable->saveContent( "Migra24 – Visitors", $AirtableData );
+      $AirtableCustomer = $airtable->saveContent( "Migra24 – Visitors", $AirtableData );
 
 
 
@@ -70,43 +70,43 @@ try {
 
 
       // ADD CUSTOMER TO MAILERLITE
-      $mailerLiteApiKey = getenv('MIG_ML_SK');
-      $groupId = '112280603'; //2024 Migrapreneur Fair Customers
-      $mailerliteClient = new \MailerLiteApi\MailerLite($mailerLiteApiKey);
+      //$mailerLiteApiKey = getenv('MIG_ML_SK');
+      //$groupId = '112280603'; //2024 Migrapreneur Fair Customers
+      //$mailerliteClient = new \MailerLiteApi\MailerLite($mailerLiteApiKey);
 
-      $groupsApi = $mailerliteClient->groups();
-      $groups = $groupsApi->get(); // returns array of groups
+      //$groupsApi = $mailerliteClient->groups();
+      //$groups = $groupsApi->get(); // returns array of groups
 
 
-      $subscriber = [
-        'email' => $eMail,
-        'name' => $firstName,
-        'fields' => [
-          'last_name' => $lastName,
-          'city' => $City,
-          'reasonwhy' => $reasonWhy,
-          'currentjob' => $currentJob,
-          'passtype' => $orderedPass,
-          'ticket' => $passID,
-          'company' =>  $CompanyName,
-          'nationality' =>  $countryofOrigin,
-        ]
-      ];
+      //$subscriber = [
+        //'email' => $eMail,
+        //'name' => $firstName,
+        //'fields' => [
+        //  'last_name' => $lastName,
+        //  'city' => $City,
+        //  'reasonwhy' => $reasonWhy,
+        //  'currentjob' => $currentJob,
+        //  'passtype' => $orderedPass,
+        //  'ticket' => $passID,
+        //  'company' =>  $CompanyName,
+        //  'nationality' =>  $countryofOrigin,
+        //]
+      //];
 
-      $response = $groupsApi->addSubscriber($groupId, $subscriber); // Change GROUP_ID with ID of group you want to add subscriber to
+      //$response = $groupsApi->addSubscriber($groupId, $subscriber); // Change GROUP_ID with ID of group you want to add subscriber to
 
 
       //OUTPUT RESULTS
 
       // Redirect to Ticket page
       $ticketId = $passID; // Replace with the appropriate ticket ID
-      //header("Location: ticket?id=$ticketId");
+      header("Location: ticket?id=$ticketId");
       exit; // Make sure to exit to prevent further script execution
 
 
     } catch (Exception $e) {
         // Handle exceptions here, e.g., log them or show an error message
-        //echo "An error occurred: " . $e->getMessage();
+        echo "An error occurred: " . $e->getMessage();
     }
 
 

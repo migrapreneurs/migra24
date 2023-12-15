@@ -6,16 +6,33 @@ session_start(); // Start the session
 require __DIR__.'/_src/at_init.php';
 
 
-$STRIPE_SK = getenv('STRIPE_SECRET_KEY');
-$sessionID = $_GET['session_id'];
+if(isset($_GET['session_id'])) {
+  $STRIPE_SK = getenv('STRIPE_SECRET_KEY');
+  $sessionID = $_GET['session_id'];
 
-$stripe = new \Stripe\StripeClient($STRIPE_SK);
-$StripeData = $stripe->checkout->sessions->retrieve($sessionID);
+  $stripe = new \Stripe\StripeClient($STRIPE_SK);
+  $StripeData = $stripe->checkout->sessions->retrieve($sessionID);
 
 
-$customerEmail = $StripeData['customer_details']['email'];
-$customerName = $StripeData['customer_details']['name'];
-$orderID =  $StripeData['payment_intent'];
+  $customerEmail = $StripeData['customer_details']['email'];
+  $customerName = $StripeData['customer_details']['name'];
+  $orderID =  $StripeData['payment_intent'];
+
+
+    //name
+
+    $nameParts = explode(' ', $customerName);
+
+    // Extract the first and last names
+    $firstName = $nameParts[0];
+    $lastName = end($nameParts);
+
+
+}
+
+
+
+
 $passID = $_GET['pass-id'];
 if (!empty($StripeData)){
   $status = $StripeData['status'];
@@ -24,14 +41,6 @@ if (!empty($StripeData)){
 }
 
 
-
-  //name
-
-  $nameParts = explode(' ', $customerName);
-
-  // Extract the first and last names
-  $firstName = $nameParts[0];
-  $lastName = end($nameParts);
 
 
   // Get Pass Name and ID
@@ -140,22 +149,22 @@ $RanPassID = generatePassID();
             <div class="input-container mar-t-120 col-xs-12">
               <div class="input-wrapper">
                 <label for="firstName">First name</label>
-                <input type="text" id="firstName" name="firstName" disabled value="<?= $firstName; ?>">
+                <input type="text" id="firstName" name="firstName" value="<?= $firstName; ?>">
               </div>
 
               <div class="input-wrapper">
                 <label for="lastName">Second name</label>
-                <input type="text" id="lastName" name="lastName" disabled value="<?= $lastName; ?>">
+                <input type="text" id="lastName" name="lastName" value="<?= $lastName; ?>">
               </div>
 
               <div class="input-wrapper">
                 <label for="eMail">Email address</label>
-                <input type="email" id="eMail" name="eMail" disabled value="<?= $customerEmail; ?>">
+                <input type="email" id="eMail" name="eMail" value="<?= $customerEmail; ?>">
               </div>
 
               <div class="input-wrapper">
                 <label for="orderedPass">Ordered Pass</label>
-                <input type="text" id="orderedPass" name="orderedPass" disabled value="<?= $ticketTitle; ?>">
+                <input type="text" id="orderedPass" name="orderedPass" value="<?= $ticketTitle; ?>">
               </div>
 
               <?php
@@ -531,9 +540,6 @@ $RanPassID = generatePassID();
 
               <div class="input-wrapper">
                 <input type="hidden" name="orderID" value="<?= $orderID; ?>">
-                <input type="hidden" name="firstName" value="<?= $firstName; ?>">
-                <input type="hidden" name="lastName" value="<?= $lastName; ?>">
-                <input type="hidden" name="eMail" value="<?= $customerEmail; ?>">
                 <input type="hidden" name="orderedPass" value="<?= $ticketTitle; ?>">
               </div>
 
