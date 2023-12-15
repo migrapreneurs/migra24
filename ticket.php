@@ -7,7 +7,7 @@ require __DIR__.'/_src/at_init.php';
 $desiredRecord = null;
 $ticketID_Temp = $_GET['id'];
 
-//Test
+
 
 
 // GET EVENT CREDENTIALS
