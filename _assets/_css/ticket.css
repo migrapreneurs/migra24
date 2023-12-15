@@ -1,5 +1,5 @@
 main {
-  margin:120px;
+  margin:calc(20px + (120 - 20) * ((100vw - 375px) / (1600 - 375)));
 }
 
 /* Saol Display SemiBold Font */
@@ -211,6 +211,10 @@ p a.link {
   margin-top: calc(10px + (20 - 10) * ((100vw - 375px) / (1600 - 375))) !important;
 }
 
+
+#Ticket {
+  margin-top: calc(100px + (120 - 100) * ((100vw - 375px) / (1600 - 375)));
+}
 
 .ticketID {
   padding:10px 15px;
